@@ -53,7 +53,7 @@ Real-world execution logs, validation traces, and response payloads are captured
 You can run these scripts using the local Apache JMeter installation included in this repository.
 
 ### Prerequisites
-Make sure Java 8 or higher is installed on your system.
+Make sure Java 1.8 (Java 8) is installed on your system.
 
 ### Running via GUI Mode
 For building, editing, or debugging tests:
