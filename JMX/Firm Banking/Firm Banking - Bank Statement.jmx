@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Firm Banking - Bank Statement" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="pathB2bBatam" elementType="Argument">
+            <stringProp name="Argument.name">pathB2bBatam</stringProp>
+            <stringProp name="Argument.value">/v2.0/access-token/b2b/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2cBatam" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2cBatam</stringProp>
+            <stringProp name="Argument.value">/v2.0/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathFolder" elementType="Argument">
+            <stringProp name="Argument.name">pathFolder</stringProp>
+            <stringProp name="Argument.value">/Users/jordan/Desktop/JMX/api/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathInquiry" elementType="Argument">
+            <stringProp name="Argument.name">pathInquiry</stringProp>
+            <stringProp name="Argument.value">/v1.0/account-inquiry-internal/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathTransfer" elementType="Argument">
+            <stringProp name="Argument.name">pathTransfer</stringProp>
+            <stringProp name="Argument.value">/v1.0/transfer-intrabank/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="beneficiaryAccount1" elementType="Argument">
+            <stringProp name="Argument.name">beneficiaryAccount1</stringProp>
+            <stringProp name="Argument.value">10110271117</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sourceAccountNo1" elementType="Argument">
+            <stringProp name="Argument.name">sourceAccountNo1</stringProp>
+            <stringProp name="Argument.value">10110004437</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sourceAccountNo2" elementType="Argument">
+            <stringProp name="Argument.name">sourceAccountNo2</stringProp>
+            <stringProp name="Argument.value">10032111114</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sourceAccountNo3" elementType="Argument">
+            <stringProp name="Argument.name">sourceAccountNo3</stringProp>
+            <stringProp name="Argument.value">10110345218</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="[SIT] CSA" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">DEV</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">10.130.1.153</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-tmp.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">76b4fb04-ca3c-40a5-9935-06a107d967d2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">5cdbbab1-f0a9-450b-81dd-01806c6af28f</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">0021</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">APIMGM</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">device-cobrand-emoney-zu-${__Random(2025000,2025999)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="bankCardToken" elementType="Argument">
+            <stringProp name="Argument.name">bankCardToken</stringProp>
+            <stringProp name="Argument.value">b253f7c40592e50ce2a5590bd8d1d2c9</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">192.168.2.51</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v1.0/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://webhook.site/bdfcbf10-cfb3-4483-9739-ab4114ad48b8</stringProp>
+            <stringProp name="Argument.desc">https://webhook.site/bdfcbf10-cfb3-4483-9739-ab4114ad48b8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">1008442812</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="[UAT] CSA 1008442812" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">326a896c-cfbf-41f9-8254-9e140f8b53e2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">9f72143f-a721-4da1-a388-b6366c78313a</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">e43ddaf0ca1282fb3192d3b3380a7d46</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">0021</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">APIMGM</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">audi-device-666</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">192.168.2.51</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://2c7850aded434dae91c9a19075fbd877.api.mockbin.io/</stringProp>
+            <stringProp name="Argument.desc">https://webhook.site/bdfcbf10-cfb3-4483-9739-ab4114ad48b8</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">1008442812</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0877871113312</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">142536</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value">543005</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222116 - Rexus" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">0b2a59c67f64f0f95648a44c91238ed0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222116</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222116</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">704e4547a2f77c472467de4744db8ed8f254e8407f356e819072b4aea54459b57ab01cc384f7ebc7811d40a5cae49bba64da0120c69437ed0c92278b854b25f4385a85af0a06da7109e35f5c7ae8582baa67fd9839e06e00e546cf7e3c2db0eb5f7249bbd98ca119ab4c8188f7823fe94baf66d9473360e8363de547202d31068b664af602c03de2ce68fbcaa3091621986d517846105371487c2169dfc6e8471029824f9227ffd5255375eb7d120bd1fb70ee13ca2006a3fa719e922edfd485991c889561b2b3dbed2d37dcd411ad13a58291dd7bfa711ccc34e8629428882e1321ef60272b74a328f301f648c479c76ce3d7053810355737f8b3069d26429f0d36eb01fae7e5767d0a629cf0f8df693d995a5497515ca88584078da65e47afc7f61c4795579fba51344e9acb7dbfbea343e139bdf47991736ab42e68b4f67e05a7d930356276c4b1a95a59dd69646c1efb796e770a931e22d1bfe0ac19187ff69516bb3ef69e6f223d267b01c0d1b53a9abf05ec8c52f0b541fe6aa52a3c3bad6a6c5432b58cbd243c611db219540d45c6ce827ef90f323decaa1b5ace73398aa2f5349f23405e20b2b6b221aaebe0bf2e7c099a479b3161b87da0de0bc9a98d570a94417868bc987d3cf65c170884b1c1af97d3ac97168f16050ea75eaf68a593fab43a8e0d678daacb0deb62a2bc97e36cd64e5977698cb905036ddcaeaa469d0501983b598f73f23163311625922bf29e3cbdc5c2c22e5071125dea822fb4931bbe21ec749c2b8066dfb91b50302f9f8b1bad2f3be1385a17ca787981a1dd979031e3ac8c51a400cfd42f6a9d6b0972bb63fd37a569979c75b4baabd5304147d014bb46be754207ebb6d5a9d1c62817b41b47902e7ec4dc368ea26d2a8240f90cd64ce64e5e0fb1dfbe5b9eac2f8b5a6a9854d741fd19e06bf0f78bc4621caabb27d05171a554f6856267d0f8bccabd308e70507cec7941073b39700ec01ec30684b12ec0d14711e69234b7d41a716e3bd69f6e1d58b5546fe444109f4e0a30734d0e4f20a74a90820f8d8832cefdbaf1cf5df22be9ba7b16187f3535aebab5817e9651f3b711835a784b8a94f657ef604b1398e0f5e08e4a758e1fdcdf35afcb9a862a603e939266021f328ab0ce8e3e8eb51195f1591c58065ea23e58dc5fd620399b203b879fb04c20200c2c6aeeba67c3294fdc6d1a04496a8b57b357968523f158da4574c411f81b1f867a439d24be3bc1b1f0a1376b13729bddb0cad8e66576fe334cf3093b5c2ba023ee0164ca4e1601b892d2bb045956741205</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3277222512902316</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">0b2a59c67f64f0f95648a44c91238ed0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227371</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111524061591</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">Phone : 0811222116</stringProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222117 Rx King" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">9c0678d8c860a3d4b69d41c1a90ab35b</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222117</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222117</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">704e4547a2f77c472467de4744db8ed8101c685bb12d25f7eace91ef2a5f71ee91fed116e8b5ce7a610e4da826470c7f92e29afcc7f34f797271ce20048a8d94328db3a8a07b36f873aa4492fc77a63eaca7ae24ee99e76ab46b1e86ced011ef3a8a7db2bd9e5bed17fdbb47e44bff80bb3f9d3e6aa5bed95469725e7eaf63b2ee39431bdb0269683bfd6da64a94c2922fad65ce61f2d4ef992bf21ee75a153691a420112ab6ee985ccd4d6314d4a39e9c8ccc94cf528f8e5c0180e26a5223cfa664388c252d0857fb514207ea208ff423f757795d9666de993f0f71a11f8f61cadee2a18e6da15114669980c6e2df4c46e76039e8ed769c28d9ad57ac5fb77f1221e377cb5bf7d7550096fa9db7ec51a5381e514d1eff891558fb50b0100b58d8c620804b0aba64c5e44490d11b78c925d86afc708048b5673d924eb415e396327c3ca5a7557213d00910e0aa60966ab6ddc60363a2013f495e0f1e6c72afc3fbac0a293d03970280b6ce71cee16275c9e3291b250b10edc35b8e1214000ea18b544d01445675d1fbf88c7ecbbbfa00127b756630b5f180ce97b460d5e39d40c9b59dab1b5a6711661f8095830c1ec318ad48f7b4854fa5abb847e7c0cb5dfa8b2bb6c629c11fd0a25a11ed4d0c3736b2deb0904bd20d8f64263b6b6c03ae805967e0819ee264215d85848602480adadb2bc0479a068e6f39a8f62de6d823ef894a105676b324b065e8d7a4039ff74ad8cc2b5824ff6336ffeed4aa5feadd5e37540d549a9cb0ba14b791f41be3c3849c00f2c86e90fdda181ad65db273ea77a0132cdba8ca75ba93c41a99bdadbd4d43b4b7c541478d8136d2158f12bc9879401c03af92aec1cf69ffd10d18e3238e0398b6d99fbce388c837fcac13720ddb9be3f36c8d9edcda09e2f5f667b02648ba37c9447a0580d79c9735f1418341c56285d9a6d5b022b1749fc1d61ddf4ae25a91efbbf76522b28e8d41d1d058d9a3f31e2b630b8486e257d14d51638c7d0479ad3b4d4d1f1deda7c401293c24fbdd94b39c5cad3a2e71930863a2f011e61f20b1b03a77002790495ae2ac32acedacf196b0e525784215a59d97bd7c303e2c5a11ffa452374af701303054451c4083d091deafa6fab90fa9cc625edbe4e9c58718e20e854f11b3e78de38f349cab200068e37f054559e10e023f4ddef2caa1a392e2afd4e066c658efad49c5f0cafc5c08e4d36b513c09125d5aed8a5a4f91a0af362681e878c419ca5fca7b8c65aa2624ca659337e2ce9b5412b809939cbb</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3277222512902317</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260511113939000 </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227401</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111720958937</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">Phone : 0811222114</stringProp>
+      </Arguments>
+      <hashTree/>
+      <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+        <boolProp name="resetInterpreter">false</boolProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="script">String time = &quot;${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss+07:00)}&quot;;
+
+props.put(&quot;time&quot;,time);</stringProp>
+      </BeanShellPreProcessor>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="[Batam] Get token b2b and b2b2c" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get token b2b" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;grantType&quot;: &quot;client_credentials&quot;,&#xd;
+    &quot;additionalInfo&quot;: {&#xd;
+        &quot;partnerId&quot;: &quot;${partnerId}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${pathB2bBatam}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-CLIENT-KEY</stringProp>
+                <stringProp name="Header.value">${clientId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(2022000000000,2022999999999)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.113</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">APIMGM</stringProp>
+              </elementProp>
+              <elementProp name="X-SIGNATURE" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${signature}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.security.*;
+import java.security.spec.*;
+import java.util.Base64;
+
+String privateKeyString = &quot;${privateKey}&quot;;
+String applyToken = &quot;${clientId}&quot;+&quot;|&quot;+&quot;${__property(time)}&quot;;
+
+// Remove the BEGIN and END lines, and any newline characters
+privateKeyString = privateKeyString.replaceAll(&quot;-----BEGIN RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;-----END RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;\n&quot;, &quot;&quot;)
+        .replaceAll(&quot; &quot;, &quot;&quot;)
+        .replaceAll(&quot;\r&quot;, &quot;&quot;)
+
+// Decode base64
+byte[] privateKeyBytes = Base64.getDecoder().decode(privateKeyString);
+
+// Generate PrivateKey object
+EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
+KeyFactory kf = KeyFactory.getInstance(&quot;RSA&quot;);
+PrivateKey privateKey = kf.generatePrivate(privKeySpec);
+
+def generateSignature(String input, PrivateKey privateKey) {
+    try {
+        Signature signature = Signature.getInstance(&quot;SHA256withRSA&quot;);
+        signature.initSign(privateKey);
+        signature.update(input.getBytes(&quot;UTF-8&quot;));
+        byte[] signedBytes = signature.sign();
+        return Base64.getEncoder().encodeToString(signedBytes);
+    } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException | UnsupportedEncodingException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
+
+def signature = generateSignature(applyToken, privateKey);
+vars.put(&quot;signature&quot;, signature);
+
+log.info(&quot;applyToken: &quot;+ applyToken);
+log.info(&quot;signature: &quot;+ signature);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.accessToken</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
+            <stringProp name="BeanShellAssertion.query">${__setProperty(b2b,${token})}</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">true</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+vars.put(&quot;b2b&quot;, json.accessToken);
+props.put(&quot;b2b&quot;, json.accessToken);
+
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get token b2b2c" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;grantType&quot;: &quot;client_credentials&quot;,&#xd;
+  &quot;authCode&quot;: &quot;${authCode}&quot;,&#xd;
+  &quot;refreshToken&quot;: &quot;&quot;&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${pathB2b2cBatam}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202000000000,202100000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">APIMGM</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${signature}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+              <elementProp name="X-CLIENT-KEY" elementType="Header">
+                <stringProp name="Header.name">X-CLIENT-KEY</stringProp>
+                <stringProp name="Header.value">${clientId}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+def builder = new JsonBuilder(request)
+def databody = JsonOutput.toJson(builder.content)
+def method = sampler.getMethod();
+def apikey = props.get(&quot;b2bToken&quot;);
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+
+//log.info(&quot;b2b token: &quot; + props.get(&quot;b2bToken&quot;))
+
+def signature = hmacSHA
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey/b2bToken: &quot;+ apikey);
+log.info(&quot;secretKey: &quot; + secretKey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+vars.put(&quot;sign&quot;, hmacSHA);
+
+// Calculate the HMAC-SHA-512 hash
+println(&quot;Calculated HMAC-SHA-512: $hmacSHA&quot;)
+// Compare with the provided signature
+if (hmacSHA == signature) {
+    log.info(&quot; &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Signature matches. Request integrity is verified.&quot;)
+} else {
+    log.info(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Signature does not match. Request integrity is compromised.&quot;)
+}
+
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.security.*;
+import java.security.spec.*;
+import java.util.Base64;
+
+String privateKeyString = &quot;${privateKey}&quot;;
+String applyToken = &quot;${clientId}&quot;+&quot;|&quot;+&quot;${__property(time)}&quot;;
+
+// Remove the BEGIN and END lines, and any newline characters
+privateKeyString = privateKeyString.replaceAll(&quot;-----BEGIN RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;-----END RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;\n&quot;, &quot;&quot;)
+        .replaceAll(&quot; &quot;, &quot;&quot;)
+        .replaceAll(&quot;\r&quot;, &quot;&quot;)
+
+// Decode base64
+byte[] privateKeyBytes = Base64.getDecoder().decode(privateKeyString);
+
+// Generate PrivateKey object
+EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
+KeyFactory kf = KeyFactory.getInstance(&quot;RSA&quot;);
+PrivateKey privateKey = kf.generatePrivate(privKeySpec);
+
+def generateSignature(String input, PrivateKey privateKey) {
+    try {
+        Signature signature = Signature.getInstance(&quot;SHA256withRSA&quot;);
+        signature.initSign(privateKey);
+        signature.update(input.getBytes(&quot;UTF-8&quot;));
+        byte[] signedBytes = signature.sign();
+        return Base64.getEncoder().encodeToString(signedBytes);
+    } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException | UnsupportedEncodingException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
+
+def signature = generateSignature(applyToken, privateKey);
+vars.put(&quot;signature&quot;, signature);
+
+log.info(&quot;applyToken: &quot;+ applyToken);
+log.info(&quot;signature: &quot;+ signature);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+props.put(&quot;b2b2cValue&quot;, json.accessToken);
+
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="false">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">false</stringProp>
+          <stringProp name="script">String res=prev.getResponseDataAsString();
+String req = sampler.getArguments().getArgument(0).getValue().toString();
+String responseHeader= prev.getResponseHeaders();
+String url = sampler.getUrl();
+String requestHeader = sampler.getHeaderManager().getHeaders().toString();
+
+String folder = &apos;${pathFolder}&apos;;
+String env = &apos;${env}&apos;;
+String name = &apos;${__threadGroupName}&apos;;
+
+File f = new File(folder + env + &apos; - &apos;+name + &apos;.txt&apos;);
+FileWriter fstream = new FileWriter(f.getPath(),true);
+
+fstream.write(&apos;\n&apos;);
+fstream.write(&apos;URL: &apos; + url + &apos;\n&apos;);
+fstream.write(&apos;\nREQUEST HEADER: \n\n&apos;);
+for (int i = 0; i &lt; sampler.getHeaderManager().size(); i++) {
+    String header = sampler.getHeaderManager().getHeader(i)
+    fstream.write(header + &apos;\n&apos;);
+}
+
+fstream.write(&apos;\nREQUEST BODY: \n\n&apos; + req + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE HEADER: \n\n&apos;+ responseHeader + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE BODY: \n\n&apos;+ res + &apos;\n&apos;);
+fstream.write(&apos;\n\n---------------------------------------------------------------------------------------\n\n&apos;);
+fstream.close();</stringProp>
+        </JSR223PostProcessor>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="[Batam] Standalone - Intrabank SIT" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[Positive] Intrabank - Inquiry" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;partnerReferenceNo&quot;: &quot;${__Random(202300000000, 202399999999)}&quot;,&#xd;
+  &quot;beneficiaryAccountNo&quot;: &quot;${beneficiaryAccount1}&quot;,&#xd;
+  &quot;additionalInfo&quot;: {}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${pathInquiry}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202200000000, 202300000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.44</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+
+def builder = new JsonBuilder(request)
+
+def databody = JsonOutput.toJson(builder.content)
+
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + apikey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1449448396">2000200</stringProp>
+              <stringProp name="-202516509">Success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Response Code Or Response Message Did Not Match With Expected Result</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)
+
+props.put(&quot;partnerReferenceNo&quot;, jsonRequest.partnerReferenceNo);
+props.put(&quot;referenceNo&quot;, json.referenceNo);
+props.put(&quot;beneficiaryAccountNo&quot;, json.beneficiaryAccountNo);
+props.put(&quot;beneficiaryAccountName&quot;, json.beneficiaryAccountName);
+vars.put(&quot;sourceAccountNo&quot;, json.sourceAccountNo);
+props.put(&quot;sourceAccountName&quot;, json.additionalInfo.sourceAccName);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[Positive] Intrabank - Transfer" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;partnerReferenceNo&quot;: &quot;${__property(partnerReferenceNo)}&quot;,&#xd;
+    &quot;amount&quot;: {&#xd;
+        &quot;value&quot;: &quot;12345.00&quot;,&#xd;
+        &quot;currency&quot;: &quot;IDR&quot;&#xd;
+    },&#xd;
+    &quot;beneficiaryAccountNo&quot;: &quot;${__property(beneficiaryAccountNo)}&quot;,&#xd;
+    &quot;beneficiaryEmail&quot;: &quot;&quot;,&#xd;
+    &quot;currency&quot;: &quot;IDR&quot;,&#xd;
+    &quot;customerReference&quot;: &quot;${__property(referenceNo)}&quot;,&#xd;
+    &quot;feeType&quot;: &quot;&quot;,&#xd;
+    &quot;remark&quot;: &quot;test-standalone-tranf&quot;,&#xd;
+    &quot;sourceAccountNo&quot;: &quot;10110004437&quot;,&#xd;
+    &quot;transactionDate&quot;: &quot;${__property(time)}&quot;,&#xd;
+    &quot;additionalInfo&quot;: {&#xd;
+        &quot;sourceAccountName&quot;: &quot;${__property(sourceAccountName)}&quot;,&#xd;
+        &quot;beneficiaryAccountName&quot;: &quot;${__property(beneficiaryAccountName)}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${pathTransfer}</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202200000000, 202300000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.44</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+
+def builder = new JsonBuilder(request)
+
+def databody = JsonOutput.toJson(builder.content)
+
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + apikey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1449448396">2000200</stringProp>
+              <stringProp name="-202516509">Success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Response Code Or Response Message Did Not Match With Expected Result</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)
+
+props.put(&quot;transactionDate&quot;, json.transactionDate);
+props.put(&quot;sourceAccountNo&quot;, jsonRequest.sourceAccountNo);
+//props.put(&quot;custName&quot;, json.customerName);
+//vars.put(&quot;proxyUser&quot;, jsonRequest.additionalInfo.proxyUser);
+//vars.put(&quot;sourceAccountBankId&quot;, jsonRequest.additionalInfo.sourceAccountBankId);
+//vars.put(&quot;sourceAccountBankNo&quot;, jsonRequest.additionalInfo.sourceAccountBankNo);
+//vars.put(&quot;beneficiaryAccountName&quot;, json.beneficiaryAccountName);
+//vars.put(&quot;beneficiaryBankCode&quot;, json.beneficiaryBankCode);
+//vars.put(&quot;referenceNo&quot;, json.referenceNo);
+//vars.put(&quot;beneficiaryAccountType&quot;, json.additionalInfo.beneficiaryAccountType);
+//vars.put(&quot;beneficiaryType&quot;, json.additionalInfo.beneficiaryType);
+//vars.put(&quot;beneficiaryNat&quot;, json.additionalInfo.beneficiaryNat);
+//vars.put(&quot;beneficiaryResStatus&quot;, json.additionalInfo.beneficiaryResStatus);
+//vars.put(&quot;beneficiaryCityCode&quot;, json.additionalInfo.beneficiaryCityCode);
+//vars.put(&quot;amountValue&quot;, jsonRequest.additionalInfo.amount.value);
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">false</stringProp>
+          <stringProp name="script">String res=prev.getResponseDataAsString();
+String req = sampler.getArguments().getArgument(0).getValue().toString();
+String responseHeader= prev.getResponseHeaders();
+String url = sampler.getUrl();
+String requestHeader = sampler.getHeaderManager().getHeaders().toString();
+
+String folder = &apos;${pathFolder}&apos;;
+String env = &apos;${env}&apos;;
+String name = &apos;${__threadGroupName}&apos;;
+
+File f = new File(folder + env + &apos; - &apos;+ name + &apos;.txt&apos;);
+FileWriter fstream = new FileWriter(f.getPath(),true);
+
+fstream.write(&apos;\n&apos;);
+fstream.write(&apos;URL: &apos; + url + &apos;\n&apos;);
+fstream.write(&apos;\nREQUEST HEADER: \n\n&apos;);
+for (int i = 0; i &lt; sampler.getHeaderManager().size(); i++) {
+    String header = sampler.getHeaderManager().getHeader(i)
+    fstream.write(header + &apos;\n&apos;);
+}
+
+fstream.write(&apos;\nREQUEST BODY: \n\n&apos; + req + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE HEADER: \n\n&apos;+ responseHeader + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE BODY: \n\n&apos;+ res + &apos;\n&apos;);
+fstream.write(&apos;\n\n---------------------------------------------------------------------------------------\n\n&apos;);
+fstream.close();</stringProp>
+        </JSR223PostProcessor>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="[Batam] Standalone - Bank Statement" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[Positive] History List" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;partnerReferenceNo&quot;: &quot;${__property(partnerReferenceNo)}&quot;,&#xd;
+    &quot;fromDateTime&quot;: &quot;${__property(transactionDate)}&quot;,&#xd;
+    &quot;toDateTime&quot;: &quot;${__property(transactionDate)}&quot;,&#xd;
+    &quot;accountNumber&quot;: &quot;${__property(sourceAccountNo)}&quot;,&#xd;
+    &quot;additionalInfo&quot;: {&#xd;
+        &quot;AccountNo&quot;: &quot;${__property(sourceAccountNo)}&quot;,&#xd;
+        &quot;accountId&quot;: &quot;${accountId}&quot;,&#xd;
+        &quot;pageId&quot;: &quot;&quot;,&#xd;
+        &quot;lastTrxDate&quot;: &quot;&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1.0/bank-statement/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202200000000, 202300000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.44</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+
+def builder = new JsonBuilder(request)
+
+def databody = JsonOutput.toJson(builder.content)
+
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + apikey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1449448396">2000200</stringProp>
+              <stringProp name="-202516509">Success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Response Code Or Response Message Did Not Match With Expected Result</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)
+
+props.put(&quot;partnerReferenceNo&quot;, jsonRequest.partnerReferenceNo);
+props.put(&quot;referenceNo&quot;, json.referenceNo);
+props.put(&quot;beneficiaryAccountNo&quot;, json.beneficiaryAccountNo);
+props.put(&quot;beneficiaryAccountName&quot;, json.beneficiaryAccountName);
+vars.put(&quot;sourceAccountNo&quot;, json.sourceAccountNo);
+props.put(&quot;sourceAccountName&quot;, json.additionalInfo.sourceAccName);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[Positive] History List" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;partnerReferenceNo&quot;:&quot;2020102900000000000001&quot;,&#xd;
+   &quot;bankCardToken&quot;:&quot;&quot;,&#xd;
+   &quot;accountNo&quot;:&quot;${accountNo}&quot;,&#xd;
+   &quot;fromDateTime&quot;:&quot;2026-05-06T12:08:56+07:00&quot;,&#xd;
+   &quot;toDateTime&quot;:&quot;2026-05-12T12:08:56+07:00&quot;,&#xd;
+   &quot;additionalInfo&quot;:{&#xd;
+      &quot;deviceId&quot;:&quot;${deviceId}&quot;,&#xd;
+      &quot;channel&quot;:&quot;mobilephone&quot;&#xd;
+   }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1.0/bank-statement/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202200000000, 202300000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.44</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+
+def builder = new JsonBuilder(request)
+
+def databody = JsonOutput.toJson(builder.content)
+
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + apikey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1449448396">2000200</stringProp>
+              <stringProp name="-202516509">Success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Response Code Or Response Message Did Not Match With Expected Result</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)
+
+props.put(&quot;partnerReferenceNo&quot;, jsonRequest.partnerReferenceNo);
+props.put(&quot;referenceNo&quot;, json.referenceNo);
+props.put(&quot;beneficiaryAccountNo&quot;, json.beneficiaryAccountNo);
+props.put(&quot;beneficiaryAccountName&quot;, json.beneficiaryAccountName);
+vars.put(&quot;sourceAccountNo&quot;, json.sourceAccountNo);
+props.put(&quot;sourceAccountName&quot;, json.additionalInfo.sourceAccName);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="[Positive] History Detail" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;originalPartnerReferenceNo&quot;: &quot;28947293845923&quot;,&#xd;
+    &quot;additionalInfo&quot;: {&#xd;
+        &quot;AccountNo&quot;: &quot;10199863744&quot;,&#xd;
+        &quot;accountId&quot;: &quot;10199863744&quot;,&#xd;
+        &quot;transactionDate&quot;: &quot;20220822&quot;,&#xd;
+        &quot;serialNumber&quot;: &quot;002008240&quot;,&#xd;
+        &quot;subSequenceNum&quot;: &quot;00001&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1.0/transaction-history-detail/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202200000000, 202300000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.44</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+
+def builder = new JsonBuilder(request)
+
+def databody = JsonOutput.toJson(builder.content)
+
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + apikey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="-1449448396">2000200</stringProp>
+              <stringProp name="-202516509">Success</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">Response Code Or Response Message Did Not Match With Expected Result</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
+            <stringProp name="Scope.variable"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)
+
+//props.put(&quot;beneficiaryAccountNo&quot;, jsonRequest.beneficiaryAccountNo);
+//props.put(&quot;referenceNo&quot;, json.referenceNo);
+//props.put(&quot;custName&quot;, json.customerName);
+//vars.put(&quot;proxyUser&quot;, jsonRequest.additionalInfo.proxyUser);
+//vars.put(&quot;sourceAccountBankId&quot;, jsonRequest.additionalInfo.sourceAccountBankId);
+//vars.put(&quot;sourceAccountBankNo&quot;, jsonRequest.additionalInfo.sourceAccountBankNo);
+//vars.put(&quot;beneficiaryAccountName&quot;, json.beneficiaryAccountName);
+//vars.put(&quot;beneficiaryBankCode&quot;, json.beneficiaryBankCode);
+//vars.put(&quot;referenceNo&quot;, json.referenceNo);
+//vars.put(&quot;beneficiaryAccountType&quot;, json.additionalInfo.beneficiaryAccountType);
+//vars.put(&quot;beneficiaryType&quot;, json.additionalInfo.beneficiaryType);
+//vars.put(&quot;beneficiaryNat&quot;, json.additionalInfo.beneficiaryNat);
+//vars.put(&quot;beneficiaryResStatus&quot;, json.additionalInfo.beneficiaryResStatus);
+//vars.put(&quot;beneficiaryCityCode&quot;, json.additionalInfo.beneficiaryCityCode);
+//vars.put(&quot;amountValue&quot;, jsonRequest.additionalInfo.amount.value);
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">false</stringProp>
+          <stringProp name="script">String res=prev.getResponseDataAsString();
+String req = sampler.getArguments().getArgument(0).getValue().toString();
+String responseHeader= prev.getResponseHeaders();
+String url = sampler.getUrl();
+String requestHeader = sampler.getHeaderManager().getHeaders().toString();
+
+String folder = &apos;${pathFolder}&apos;;
+String env = &apos;${env}&apos;;
+String name = &apos;${__threadGroupName}&apos;;
+
+File f = new File(folder + env + &apos; - &apos;+ name + &apos;.txt&apos;);
+FileWriter fstream = new FileWriter(f.getPath(),true);
+
+fstream.write(&apos;\n&apos;);
+fstream.write(&apos;URL: &apos; + url + &apos;\n&apos;);
+fstream.write(&apos;\nREQUEST HEADER: \n\n&apos;);
+for (int i = 0; i &lt; sampler.getHeaderManager().size(); i++) {
+    String header = sampler.getHeaderManager().getHeader(i)
+    fstream.write(header + &apos;\n&apos;);
+}
+
+fstream.write(&apos;\nREQUEST BODY: \n\n&apos; + req + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE HEADER: \n\n&apos;+ responseHeader + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE BODY: \n\n&apos;+ res + &apos;\n&apos;);
+fstream.write(&apos;\n\n---------------------------------------------------------------------------------------\n\n&apos;);
+fstream.close();</stringProp>
+        </JSR223PostProcessor>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

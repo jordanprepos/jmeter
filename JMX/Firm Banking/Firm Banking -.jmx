@@ -1,0 +1,2067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Firm Banking - Balance Inquiry" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+        <stringProp name="scriptLanguage">groovy</stringProp>
+        <stringProp name="parameters"></stringProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="cacheKey">true</stringProp>
+        <stringProp name="script">import java.time.ZonedDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
+import java.util.concurrent.ThreadLocalRandom
+
+// Time format
+def now = ZonedDateTime.now(ZoneId.of(&quot;Asia/Jakarta&quot;))
+
+def time = now.format(DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ssXXX&quot;))
+props.put(&quot;time&quot;, time)
+
+def timeRef = now.format(DateTimeFormatter.ofPattern(&quot;yyyyMMdd&apos;T&apos;HHmmss0700&quot;))
+props.put(&quot;timeRef&quot;, timeRef)
+
+// Random generators
+def randFourDigits = ThreadLocalRandom.current().nextInt(0, 100000)
+props.put(&quot;randFourDigits&quot;, String.format(&quot;%05d&quot;, randFourDigits))
+
+def randPhoneNumber = &quot;0812&quot; + String.format(&quot;%010d&quot;, ThreadLocalRandom.current().nextLong(0, 10000000000L))
+props.put(&quot;randPhoneNumber&quot;, randPhoneNumber)
+
+log.info(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;   &quot; + randPhoneNumber)
+
+def randomDeviceId = &quot;testingdevice-ds01-&quot; + String.format(&quot;%04d&quot;, ThreadLocalRandom.current().nextInt(0,10000))
+props.put(&quot;randomDeviceId&quot;, randomDeviceId)
+
+def randExternalId = &quot;0812&quot; + String.format(&quot;%08d&quot;, ThreadLocalRandom.current().nextLong(0, 10000000000L))
+props.put(&quot;randExternalId&quot;, randExternalId)
+
+def partnerRrn =  (1..64).collect { ThreadLocalRandom.current().nextInt(0,10) }.join();
+props.put(&quot;partnerRrn&quot;, partnerRrn)
+
+// 13 digit consentId
+def randomNum = ThreadLocalRandom.current().nextLong(0, 100000000L)
+def consentId = String.format(&quot;%08d&quot;, randomNum)
+props.put(&quot;consentId&quot;, consentId)
+log.info(&quot;BeanShell Consent ID &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;: &quot; + consentId)
+
+def maxLength = String.format(&quot;%013d&quot;, randomNum)
+vars.put(&quot;maxLength&quot;,maxLength)
+
+</stringProp>
+      </JSR223PreProcessor>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222109 - Bahukemon Delapan Tujuh" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">a2ea9f321cc5e40072e9721a1cad325a</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222109</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222109</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">a650646ccb85532177b135fec0f85e9ecb950d4de30821d62e39bda6a754d04ed84551e4512d4bf18a330c3d785aa7b95dfae45b413859a8ae359caad1396f95d5375787e18b32b004bda3d4b5ff1daa46c69e1fd21614e65b2aac474fb1fa7b05218c30cc357dc3200761f8025802c6795e28893d61a1abe7ad16d5a8e42b10c70a31c5e6a9d27233376a377aa9227bed39d23a22d3487f8efe3fb78f5219ad6178542f827ffaa99e837049ac9a7fabd7909e87d175f581034bbab6cb9fa097e113cca3b9d913824fd25ed2c79f5c800096cb1ace91f9ea9cb5994898198d68a0562a3119666a8c82dd3f8e62f8edf768be05b57089d11b6b77ca1f36521fa10c1a102f2e9b416f0bff5a8468b87966d24a6e0f467634bf3fbaa3e9bac20dfd41b93ef94aaf5ed6d157fbc6312a9b994a7de560df8d459091849e6480417b9f7f675b81a38bfd45af37878f45ea133e77698cba7356af6fe562e92da3182e3720a1a03001f0b351cfac4b25b3b5434e9374b2a837078f656e6e24acf549d0c9450d46cca3f993f19ea1c3fadc65049a41afaf544407157e3e66f03023f683cf1dca34fda451110d09959d7640fd24e9a909df90f18be830ae6c21046e6aba640bf3b33c661f46fe1d1b10d844f6470681d51620585b0b1d4590861cc27357ca105b61f14de077c18a8a722e62cd931b17e03364dcb8df616292d9b1057250968803e08985e4ecaa10482d9bf78e54a032b8284a839cf20adb36ded02259332f8ea258b49cddc5e04fe7ad49b3895b2a2577fbb4e50cae80ea13716ab90eeeddd7bd50fa38f4ce2642448772eb03e38eb29d24cc657acdac3e5a5e3a57f0c40aae870c070ed0661b5d1e49dbdb82255dddac2e60d8d01fe2b11ca4ac6ab8d71a9035bc7498ff36e9f4b421cebc231755c31bc3e09f77f34b7e88f1cb197bf421bead4a6ea1725dc3b667f1249a7a8f282809bee710a630151d4460d56dd28855541ea4e0e673d59c8406d36f4d4816217a7c6ebde3a674b87f4ed33f6c0f44504c1c73b507be583c2a3792eeb3159713e425c7ef944dd1bc6b6893dee243e3207730941dcbc5a77a1c7cafc5f924cf43a1505b0d457e99c01e87fa6d7570d4298e980c1790488f1de67627b69a6a4df21a7ee38c37cd02b7e703252232715f9e2e54c5bd76ca9c2d31ed567ab5f5b24cbc5163e6701d72ba14a72e1e16a08e707232dc8fffbc878b8494eaac9b1607026039ff420ad9686ac348755a5552c6a2dd7c5c6d084e33359c3aa4d293450025e191dc192c4a2d0f10d57c72c11f410c</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3101010102903957</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260430134957000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100226960</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111687000719</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222110 - YENI PUJIYANTI" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">1215450f8bcb8adb209bd90fc46a6413</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222110</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222110</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">3b1fcc869445d15ffb71c8036a6c4615147232f400e065df4078c3b95b0ee113abec8f7f50a7e82ec10ffe18bdc2def798098843afb9acb57e763c80645cf3fd7ac134e8b1887ae8320478394efec1d588b766716fe176daebc4d1bc87697eca8b3391d7374c1aeac730edfc8c87df975958bb705e219c97bc171bc78ce9096b36e36e9cfe01f72826f11ef9a646d46e44a1a27957681b86a8152cdd273a684008391a17205339e49c11265979869b6f314a77155ebbecad67914a331f8a89049a29dbc6ad35d322d4045040d274b94b468a13543d638672cfe4e1484d15b84ec84a7283e61eefca802036465e8b180cedf334dbd969a2c075dd03133a68b80b64526d85c52f7aacf7e80e6dd9149406f74d667115f14616db8bf75cff1349b7fe036010bb7966138c49e102845042b89d2c114d350c30f966efc204e7e7adc2d0d830332e18cd215b3438efa62b994a32110ebb6d019d5e76ac31078b5ee5889fa2673413ccbcafb99e1ed26a11468c20d4899548808f3c2bb15b62ed49290f5768d91f0f0a2c0cec9beae4dfe764d96aeb4a7c514035f8c40f111a4813602a5ea5f9414a99a4f811bba5e6db170d6af681f19f202c622b4b698dd510d3ac97c242f53bfdab837ae9738170b390f0c51c2ac9b94023385b79565edd01d65c0ddcf30ff9ebef5fe88ae09e6d9b39c723a07681fc2fc3e1b594df5de22836f31e5fd120f54532b299c0f7689f9d434508d15c720cf6f6d23c2f972e7556579782cccb0eb4bfa5f210f6162908d374e06de5fa22f3e26167b42166d83a532bb680e708809dfbceb05fb05eed4f2c5d4093e4b917bea6162febd8e508c1e40e92686b9eef0baee4c4b97fa59d4523804b2baa06bc82c0fdf7e8b0bb4799d226ed74feb67e559489cd74f0d0fccd7740561fd417f29b758b60704ebe1afd0a63ea0723c415e0ddd09e149e52fee74bc4024e6260b4b54f6b33f0c323497402ae8d322e9ef5ec078bcb04e6265b3441a9e6b5ee3740c67e7a964685774a58e4ec3fbd87997f9b247ec43ba545bde21353cdc1e22a292eafe9ac63a6aa95cb572f8c137f7a299b70daf264aa0077d1e2934f5bdd9ba9a89f18152e32a0dad27fb34d55f6d116a445c26d71dbb8798e8b5f037634c4de2468a3a91ae95fb8735ea1d41279ca834360f5f5f682e519ee0c13e44a583dd374fd60b6d919358b029c83d204ad6acf062c59220a02bb005106a05d879f0ccf7a7f8c6a137aea2a90e72fd330464030efe7afc04c57a531ce42834bec06b2b472bab96ac8edb801a9aba86971</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3214010909650001</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260430154943000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100226978</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111985585954</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222111 - ERLINA ARISTIA" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">19d0ceec70461362c479be5d72975797</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222111</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">1f3cb8648c2a8ca3087a36adeba1ccd524e4f97324ba11867fe24698af62ed26d00517a6e22be7752b520c02ac8b0e532bfd1de377b2bac2b8fc6bf595d94ff3e78b1b6beb587db685c33218238907738bbac107248fbab3b2980252bc736acff4a57d34694701f450aa79c24f450475f814adcd737056c21353eb01c7050a55c600239743bad50c00065186ff17cc5c70528e2d161646ac3dbf1129b0953fa560afe7034c2c05a2fb54915409302223096fcb3b7237534e610533c71bb9a3bb7932c20a86a7a3a22b1e3d23dde570e782e1159d282764d7a01eb7b0d56434a04256d7150c9b1e6a4bf23bad43a79201f093448882d67ecc3e2f433de72e1dd0a53a0c56178fe8bf67114ed8c7cdac1d8ee9335eb0e46a31daf173e9ecb2dedd0d119c20e794e89fcc62645aa1be9a12ed42827ad197998fe760e9f69508d0e9a7d4113de392831890cedf87c78bf83c575a972d05270e8fc460e6d438453277a0b46437406b02d5e0b62a16e70a5e56604bcd1294802f6954734eabe5182332231399f0ae6464660724cd204835e6d7f350bd1c9209a5a5b0029ca5c9831989a063b0a55bb0c635bfd2cc7c3b8eb091f1b46bbd1ec5ed108dd38f2094a0d6519de6cc79fd0b138f8f8a8b4ec418b0368b3ca034687c7205102badb333ac25c325cea57c74cbbabe9334bf8ef7aafcb675269aec7c78e394e252d7b15141d9b42b0cb399a6469ccf6e75b7ee2193be57a3be5ef45cc7d6ade11dec5f2f28826512b48e03184c5b7f366791fbd9820c07bcdc771f4a34f596c2b50b535d3e01b6d30c0a7382e0bdab5481d412f1755b146b9148d71868f2da33d16dd8f234fe6244009528b664f7f2b753da65d4988114d62e5aee8d25e348454b144e40e84c6bff683e8fd987c22b6274e83f05b85d7c842ff441dc0c514b79eb151c01be555caf994dbd57d50a3426a7c9915537c7b4596066aa2edc9ff57f2a23fb18776be583a67b94486381901e3d5ab087de404fd03c6eadec9be444608dc089b501db21f59963a382c1c33e94c4c5423a0f53c745677654581a8aa818a545d7a518d3338f8c058b6691ae203f0b9569e9f96da94315eddde1ccc88038f5fc40fbf3cc4bae00a7833c5423bfe1ac211831921efc356dcf746a0241a03a9873b4fba3ae7f9ebd37b5c2a84405c2cad67119986683a92952755a880c2bef843f10c88df6dedefef9f511441930d2d232d1f08778097840b8968721df61465b821d0e0ea1331bae6c3e3a6810944d0beab39a5a20754de30b33607e8596de49acd025c4753d4ac7257adbdd28515adce5f79ebc06b6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3528051012900020</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260430174140000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227001</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111175173686</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222112 - UDA IDUN" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">17e440d9c80484e2cb59ebbca8ace103</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222112</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222112</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">4bc5ba35f2790af634efb876281a13560d2b36c7e01f8490189c106c78a7a0b5d3a68fd80908d1d3ace10178057d34324578ee70e576708409d00672f11ae0fff88f2d00c17a1faaaa77764f04218cbaa0eb5b3335b537f16b76e960204d09611e68955fa69a0d407556e61fe452a30917a8042eb30a3ab1269a19d558798a66fc1cf5608d6fa44ceca09079a85a9897f024e2755e74443f57e02708662ba1842d5c229a7dbfd2aeaf940a1a2950d3f2ff9acde411504cb1fcb97cef9d9aaa28bd4c95fd39959dc8cb71a1af4ce8e468076832100d39bb1de8ef6a5e1241a24550e81349a9e9eb5bcb73d2034db0582b2a37b4209bc4e333587741307fbccb82d94d3973b2e6c2f279bfbde6d86616dcb3c625201751ac5c08ca2c859f0335b105c5a101b828f01c6096ab34b63941acacdd3a98a403563a1508cd6a6bf18717d8cb3e9593dfda73394cc27bc1493e015ec5ecf101a9d95ff4b8b4bc717e564588a742c07c49ef510e0b15051da83c21d48f14d4148fe72e302275897ec237ba8e1b97bd35201a16cec1234bbddfd27b8aef4ba9c9f3e8a6f88c79a6ce930113ac0437dd2d042068e34d11892b6b5e5dcaf063f6c72b68fd91ae3d9820f6813577c407bd47a5eb1a2ad3274e96ac9f159cb75920e8ba627dfe421f361ac1b72c868e88633f4d79bd00d10f39e0fc69381987afd967332b1343f4952d67be8ee45ebea9192bcba97897ac80c11835de6fa4fd43b976ee9ccb40af9afaa28b09b652c1777fad06171144255c6c563132e321366870ea27edd5233b9f64064f2cd1404baf1186b6de4f023408995998de0feaef4e382d5d15160c2b7badafe4379554285aaba7f11385e626acf2ce5a9bf5a3ed4c322d8e26d8d6a70f1d6b74817bd10bdeb9b7b40d989a68e5739b11638bf6af58f5f511f286693b9c0eaf5a380adbf90ed16bf31e26fd9a9fabe0225d92d594b5c6d5e1ff553443a9362b2bb59a945962feaf766978c2ac1761d92358fbd5b6ea5c839191ba26234d884e16cd1b640ed2ee699a6d7d89c2a2bd9032a035696befeeac36d7ca0f4b54f760b7f13a77938374bc5bc373928a36d6cb4fca68ba51cefa4a39c8664389658c223b485b056e9a89a20d2850709b37ad4d352ba8eecf4085b81c85b8f0a5cf8d2140e5f0810b4719ff57920bd9467cb034a75d91f3dd72c2837e86bed35fb950e413bd5687db75ec9e33e9623dd0701fda9c7e6a9dd9452d88e23215b94dbd0a9966eb865b159217fa803e7673366a53ed0f0dfd</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">01KQVVNMYQZVC29GS9439V9S61</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">1198722307882771</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260505174549000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227206</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111598818216</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222113 - YANCE KANIA" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">2ea968b64a749a699e02d55e802f9581</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222113</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222113</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">1223406502850986</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">3c915ace397344b386d5835002fe6ee1e99c00ae292ab23bf1544190d4baf315dbdcaa85cff678a218c0baa00960eec6e0eb5f22df7548179d070c33c9bd397102f9a311368c219b9e280e32eafa1c06537e1e349acd656d0e3e6d488c67ebb02e31ee9c510b68bd40da30599544a870f339c7a5f61e4d37cd586156983b33f7d118ba9f9b9861801f232236ac5d6885ba440ddc29f7be8b18f70f244dfa13b91fba11b8a405a2a5f6cf195627c3fc508e79a3b41effd20e03c8824b8d0d15159decd88c48906cf6b918afab8454a7ff4448764942f27930c52fb34f34f63b07426ad208e810acc40beeb879eb9576c6f7577cdad2f004640fab15c5d9fe03c9c777585f3a1fbe798974024f55d85fd93c212ed50925ed663535e7197115d4943e63847d4c6a7b0ec4ace73ffd885713892de6ed8ad085ab444abaf8b1636f83e325fb31e28b495ac4ba32c9980f0b358a4f1877e35d3ea56a82065b98fcb27398c4bb116b75f0c2109232be029430bcec9c6073cebb1982d2f7d1a49955fbf6a59798b63c38fb204d4e7c847e9cc60c84e7fdb8c6b1aba34efc77a223d01684c905860d2bca93309be8d4f7b91259e6643d11237fc656b8c46863086c3de40ad48db4ea33a1efb1b0a52ff8f172a087d2f6e06b77f35b571bd8c71b21ba1be2618f11b0c5516e56e2547aef7de73803f6366c99c4c80c0bb8fb29360df4960d6582228bc14853b09d1842910db36205929774ce74cce0f1c2a1522abd8ddc2fcdb73a0b9ccbf3e94e5ccaeed2686b19387b9d23279b6c4833c536466e29bdb297f16f7d2b6345e1a82e48d808e85194c527d3c797388f11c8bf7eb1d5cf81af478385a6ab7bfef62c610b81a37ffca1ad9be8e5e6664cfffe8ea336e98a89d186c39ed543471ad08ec16068aefe6a11b1245a88d67e5790e9a26c8b12fd5d93246c87e58fb50b9145c2669e9d2c7b654fb0f2d7541880f6452e180b3d8b2eb809c7ff291f02e82b5868b1f94a0274e266e0ed7a30949fb8aed3b9c99254bb701ffccaad5910cefe0f5fa0260b258c645ad32d1c38801c17c45136f73e036984450da76d0a175d047544ab44f31292f38be5b1874c2efd9efc9e2fea5dc0b853af3b6a00acfcaee2be199efd6aa6f69c01c4621f95e01621430ceb49ade614fb1e5086c64d59c7b2ab43b13790f15464eb47245fa286a5942c095887fea42e42dbb69a6ca71a073645fdfa750c27bb2e0ea55f419c6d4a07f975598408d8d6615663af8e33152abd6162444f52be8a23ad0607dfb9fb54771153b9769e3031ee</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260507161246000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227303</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111632810124</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222114 - Gyron Ten Ten" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">32dbd7b55e489db88833a0480b52c8d4</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222114</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222114</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">a650646ccb85532177b135fec0f85e9edd7aa964066083bcac55859754732375fa4acc6e642b44d3b631ef489c9030486db62db1e4f6cbc3cc816ecd56b027d8cf924f2f7098ea92bd9f701e60456f2a359cfc6f0bbb79748fa2884b87fb10178518e6f590f4b6fd3767d959ebf4aaee9de08e5905d86556330251cc567d7e2c48ba582bfe1869c1ab5e79025f7f0cb953dc6c5f008697e0fbb1e5cbd9b542df5788407745e7194ef330f4657dff9094e3aa05b78702e99b6c4a77e25301ce62bdabf75fc6d681a7f970e474ac24ac67858ba55a7073e07887eeeb23fa50dec55d2f32c8004a3f17b5e16f350870b0880a01d9c0860f384a5317014a3942c3a6cd20df91241efa4f649d1b03242cdb9604e4947537b46ef57713bd565eeaf4b941cfebec0736263230b85df6dc5a9c537cfc528f828e763bd18e3debfb6a5dcb2baa3fe5aef9a4f534892c91389512cabe5553232e5a445ab9f189bc12524da4d3edf8790c0b844dc6e01b7e3ebc1029d594bf23a091fd29924454af3cbcb7b3ea59aa8780513c06d807f680dedf1a9bc67d92e3278a8f283d41a7f49426e171507aa39011f27af2dfc7142fb5c758ee5e890a5da5068c055a0fe5b75024b2e883622c3787db36b74e4fa36e7e2cf8907f2e6e5bf428f5d47a82823849c4a2536c89a535ce589d279e7c6349b016206a77b21dfbd515130adf3c34bc3228bf8f93d5b8c65e2f2eaf10ea1e606cc6c29e403290041a57ace64313639c1d51a4c77463640d9e2d479ef26a9177a7221b942b3c973d3f0debe2257a65eedb30ba3ff1426b66bf81784a1d89147a32db64d115abb7fcc90d40249e1d288d97e026add823b24dcf09d0f8c30167abdc6b21226a2c87398f144fcd0dd309eaeba62103f337d66f02289f5cf8d805d77ef951bf23f1b8e17a2a3545d21d74b474c1d14b08ffe962487e43ee56b46c31887ae1a5802c250abaaf4afa44abc074ea71483f531687de414c52893bfefc4d405239fb35d0726d85a362ad019540af61041006ed4e6ebc497b185beb8e79609e35992c81114586708137cc544631f0fd530ca042b8470e500d3036c64ea19eee26c36c3fb5e5a3cc5d19357cb75009a2f5cd8e88c5604d01347c121fd78d516f0502acf1b84e78da770c60854f1b561032cf5b3dcd314552c400e5bec991da371c507cb72db7fd070c4dc0fbdfb8c69b84511bd0351b060e301b5d5546fc7d0ce93e9fcdde150b0d50becc1e976fcac60d28a083f038c39642f946ffe83b3115bbd0054fae5d04f36b86bd652ff7af991f2922</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3101010102903800</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260507174154000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227338</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111985289701</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="subId" elementType="Argument">
+            <stringProp name="Argument.name">subId</stringProp>
+            <stringProp name="Argument.value">01KR10F746Z6S16JHATRWTCQWS</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222115 Dirak Dua Empat" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">274863664a75bbac3dc2916be671c337</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222115</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222115</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">4209c07e0963e45be9c0bc64824f1c270fc5a6ad7dbdd063aac343a263443145093c542aefa1e6dbf29921c04f54b4ade632295e06938781f2b8e44f561b644a064a4be5ec92cef00c77920da8c33be2a6e7de70314203a697cc0c17eae6658b626359958557cc3a41534d795392d3feaf7f4f07d81bd6f88dde6d4151aaed8bbcc89ee8cab8b95f4aff642467fdb185c28ec9c0b3e933f910729f1c9ffbe5a4dd71585e930b6e34476dbb47bc5f466c2783b98c02f821fbc0b3dd12aecb528e1c90bb0a38d96621d7fc33785ecac5de79d5b1d4137be2d5d465497c3519cf6b8da4e1726c712fb8e82d24f0b57acc1af9839d404c8a3edd6dfd156fcaade3006dde7a04cde8e14ac4984882f53c51092b6bd325f0890fe6486329fd86d759ecbc3c8dd2800525d4d45d228af39f63c26cab7391a453d503855c79aca9d9d499ae402a91131ebb8cb39fe3e823002219ee226fc8f672900fe03a9366badcbb5022251674662b3ec044438b4d6f5536f611846426c80516b84151d91b52cae5b7f676e85a37842598089e273296bb0090ff9d89e63274dde566696dcdd8867534d569a49684dc6e106aebfeb3ebd004ffcd81488449f08bcbd643dd0f018c144fbc9e1128a8e1dda068803a9470bfd0cffa493d6eb77728fca7cbe34f13cd059ac651c49b31d9b3b88dd15f02cbd5f75d9e079e4199685941481e044fbff2f7e4598280e35bb6c8084429881354d37a7ea7317a33d87984d4dabcbe7aa840adc51fe055d952d08c08b86fce6c0bc2e8546bd690f52d448f5ad47b4afb1f47231592d2a9ccbfb719759160fc580057a12c550b87959bad2faba95cc291cc5a9a1e45832a3585b6ef6f9658d896e96ae954bf1f7f1521e8673ccf6a5f0433718bbc657ade00026db808201b8b1eadf2de05cceadd53139f8329280d6fc0834d1d9c190c24a50bdf367f01f0427f6e5ba35c6cf4fb3e6ad11a96fcf0ee9f03881ca017f63c5c42f993ec2a9cbee6601af999839328d6e6e9e8e1a7b9649cc266ce160f1cd8e29f124632513356b5a99f2477d13f1cc43cf5b8b8397e14c2ab17e1735c873f3f0d40d65a52f472dd8abc5ab8576458b8c13c03b0eb5103ea9b71ae8a9c4a64851ec8c1bbd8f618540487a29b58c955140ed55a88f43c568e3029f132ad1469bd4cc03cedda99c3fd55cff5c5ed206d1837c25acbe60e8b7a6c8c615cd1878b7e9059686cf4c7e03f35e4b7616eb862ae9158ce2ea16056335ca30808745a0f0e261b432b334436a982a5269d9812032d48a7f564eab95fe8b99f318b60f578d3d60a253783ed070016118c77</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3173222512902314</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260507182031000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227346</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111715363057</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="subId" elementType="Argument">
+            <stringProp name="Argument.name">subId</stringProp>
+            <stringProp name="Argument.value">01KR12NXG4RCG114J8VB3596EG</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">Phone : 0811222115</stringProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222116 - Rexus" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">0b2a59c67f64f0f95648a44c91238ed0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222116</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222116</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">704e4547a2f77c472467de4744db8ed8f254e8407f356e819072b4aea54459b57ab01cc384f7ebc7811d40a5cae49bba64da0120c69437ed0c92278b854b25f4385a85af0a06da7109e35f5c7ae8582baa67fd9839e06e00e546cf7e3c2db0eb5f7249bbd98ca119ab4c8188f7823fe94baf66d9473360e8363de547202d31068b664af602c03de2ce68fbcaa3091621986d517846105371487c2169dfc6e8471029824f9227ffd5255375eb7d120bd1fb70ee13ca2006a3fa719e922edfd485991c889561b2b3dbed2d37dcd411ad13a58291dd7bfa711ccc34e8629428882e1321ef60272b74a328f301f648c479c76ce3d7053810355737f8b3069d26429f0d36eb01fae7e5767d0a629cf0f8df693d995a5497515ca88584078da65e47afc7f61c4795579fba51344e9acb7dbfbea343e139bdf47991736ab42e68b4f67e05a7d930356276c4b1a95a59dd69646c1efb796e770a931e22d1bfe0ac19187ff69516bb3ef69e6f223d267b01c0d1b53a9abf05ec8c52f0b541fe6aa52a3c3bad6a6c5432b58cbd243c611db219540d45c6ce827ef90f323decaa1b5ace73398aa2f5349f23405e20b2b6b221aaebe0bf2e7c099a479b3161b87da0de0bc9a98d570a94417868bc987d3cf65c170884b1c1af97d3ac97168f16050ea75eaf68a593fab43a8e0d678daacb0deb62a2bc97e36cd64e5977698cb905036ddcaeaa469d0501983b598f73f23163311625922bf29e3cbdc5c2c22e5071125dea822fb4931bbe21ec749c2b8066dfb91b50302f9f8b1bad2f3be1385a17ca787981a1dd979031e3ac8c51a400cfd42f6a9d6b0972bb63fd37a569979c75b4baabd5304147d014bb46be754207ebb6d5a9d1c62817b41b47902e7ec4dc368ea26d2a8240f90cd64ce64e5e0fb1dfbe5b9eac2f8b5a6a9854d741fd19e06bf0f78bc4621caabb27d05171a554f6856267d0f8bccabd308e70507cec7941073b39700ec01ec30684b12ec0d14711e69234b7d41a716e3bd69f6e1d58b5546fe444109f4e0a30734d0e4f20a74a90820f8d8832cefdbaf1cf5df22be9ba7b16187f3535aebab5817e9651f3b711835a784b8a94f657ef604b1398e0f5e08e4a758e1fdcdf35afcb9a862a603e939266021f328ab0ce8e3e8eb51195f1591c58065ea23e58dc5fd620399b203b879fb04c20200c2c6aeeba67c3294fdc6d1a04496a8b57b357968523f158da4574c411f81b1f867a439d24be3bc1b1f0a1376b13729bddb0cad8e66576fe334cf3093b5c2ba023ee0164ca4e1601b892d2bb045956741205</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3277222512902316</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">0b2a59c67f64f0f95648a44c91238ed0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227371</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111524061591</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">Phone : 0811222116</stringProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Madera 3 - Boost 0811222117 Rx King" enabled="false">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="env" elementType="Argument">
+            <stringProp name="Argument.name">env</stringProp>
+            <stringProp name="Argument.value">UAT</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">sandbox.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="urlBatam" elementType="Argument">
+            <stringProp name="Argument.name">urlBatam</stringProp>
+            <stringProp name="Argument.value">sandbox-api.nobubank.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value">deacbaae-8bcc-4ce5-a9c1-4822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as ID</stringProp>
+          </elementProp>
+          <elementProp name="clientSecret" elementType="Argument">
+            <stringProp name="Argument.name">clientSecret</stringProp>
+            <stringProp name="Argument.value">22cc9fb2-686c-40a3-927d-224ca93236d2</stringProp>
+            <stringProp name="Argument.desc">Used On Token B2B as Password</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="authCode" elementType="Argument">
+            <stringProp name="Argument.name">authCode</stringProp>
+            <stringProp name="Argument.value">9c0678d8c860a3d4b69d41c1a90ab35b</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerId" elementType="Argument">
+            <stringProp name="Argument.name">partnerId</stringProp>
+            <stringProp name="Argument.value">deacbaae8bcc4ce5a9c14822a0d42af6</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="obkchannelId" elementType="Argument">
+            <stringProp name="Argument.name">obkchannelId</stringProp>
+            <stringProp name="Argument.value">BOOSTID</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="deviceId" elementType="Argument">
+            <stringProp name="Argument.name">deviceId</stringProp>
+            <stringProp name="Argument.value">0811222117</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ipAddress" elementType="Argument">
+            <stringProp name="Argument.name">ipAddress</stringProp>
+            <stringProp name="Argument.value">10.14.0.3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port1" elementType="Argument">
+            <stringProp name="Argument.name">port1</stringProp>
+            <stringProp name="Argument.value">8089</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port2" elementType="Argument">
+            <stringProp name="Argument.name">port2</stringProp>
+            <stringProp name="Argument.value">8065</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pathB2b2c" elementType="Argument">
+            <stringProp name="Argument.name">pathB2b2c</stringProp>
+            <stringProp name="Argument.value">/v0.1/access-token/b2b2c/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="privateKey" elementType="Argument">
+            <stringProp name="Argument.name">privateKey</stringProp>
+            <stringProp name="Argument.value">-----BEGIN RSA PRIVATE KEY----- MIIEowIBAAKCAQEAm8G9I7sSNvxo6IrdGhx0CM7kH0RFofrv0S4iOBRytaWFONBJ aBt+43i9kDpdzqzHA6UnE7cX/9X/gNwE1kW4QSyF2xFU38DrGTZpW+a9FHVEZ9NK 2CS+3+rWWC166mkxP05JCjHWGqsPiVIgCzcaDEY4BD9E2GKyicH7L29eY9kW1xuh uXC7zRKFiJ2DrTu4uWJKZneAq4ImGz9cp77hcH1VKO0qtR1Ye1eREnZhnQ82O9BM oNEbJ1BP9z7Q0u5FnGksEMEIYRn21L2cz0rvNXTY61sIOH8kq1yt+JW9AS77HoCo 6XSNwdIxV9xigBxXAEOt0a9BQjByj0qEi8Y7CQIDAQABAoIBAFeaM8Lw6GG8vVRt JcYV0r1Rf8SGJZPhCxjflads+MdpfPBjVaYUMN3HfvarnS8sxhIqxTu1cu4VcksL dDz/oY4meHKp4M6oNpJLpB5oPFhRTFQI5sOCh0hxUHTvv34wA97TLQlq1jzRkT9u zU8Bgsj8hWz+GL6LZFdOnvQi8ze8dQPm7Nh6ml1Wl8sGYW2BygXJEWZoeVuhNArD rHiL0dgqZREJbLXSUo3O1fn+lvIHEhh4NDAqqiKG8viC8Jw35P6mIJgvCZIA3/hD u/qnkqxwZwS3wsokoTEwGyTh72bZj3Ibx87hVNBRxSv3qUD1+hu5YQuw8yla9Si7 BOu4CgECgYEAzThWdZmwMh4gx7RyIUZO1V+UZdm4Ge4EYvLdbfRdOL96HYaB99cT 871X0IqxZ3PN8Xd9avBgCE65JX+wLHH/PW16YZCsemisYn4fe5hLxF3NOR7FlwyS gRYLu+Bx3+8wDMEcYVj5+Q919OUARgJROb6+CO5+Gvtu8sZGgsHpsdECgYEAwkwm ifGjyvDciXNk1PiHqHx7I7L9IcKAdZgQNOa35tZSDPeTzVVx/FAzHsjpVfHRelTZ 62HUfC67L+px/gh55lQjKb6eDqvuN/WU2Wmk7RXq/xRZmw1CJyP2J978zUHwVIt8 RNLInoUIKT11l3j+IFPqnzZ3BrOO+eloJTCky7kCgYB/omJjkcp74TESA7BX8Zpm KqPpFJfjyJ0BzXraP/kaqjwQ0O9UbXgDR+et1BSx+txDKcXfFNElWZDdOaUgf2X3 lnde5tPe7esI9tgtznKRFqXkuLa7Ux5rGoMBvn4UgHap+BDmmqgdtvft799Tq21J NNCMTYgwz+AZLif8ew4VgQKBgBeLrufslpLTWYZ2q3N7osTyQOH0oORkc7jMcrpW c1bQBiV4Izsw7Z1MAsXqRwyZP295tObndh6OczS9To8ga9VTwOcgKHtSro2tfxpR ySDKFS5QQwOdObUQkJYIWc5t/Tfhp2+Xs6QyLukAf62ZhgJY6QfeS9JOFDeI54wK Nw5RAoGBAMVKJhfFsppDSx1Z3Guqv/ExPrH68A3OZd7DVEQ0yvX3VaiAKT7m+D2P S6n9mVC1XviVuVRkfS5fryRym+FRyFcIFJ8RHYu5r1NqWDVk6CN5hPsqu6VZBoux tNeB78XJWEyxlf5fDx9djnBFXXtak/8jODE/vrmiukge6+yeENo4 -----END RSA PRIVATE KEY-----</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="redirectUrl" elementType="Argument">
+            <stringProp name="Argument.name">redirectUrl</stringProp>
+            <stringProp name="Argument.value">https://payflex-uat.myboost.co.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="partnerUrl" elementType="Argument">
+            <stringProp name="Argument.name">partnerUrl</stringProp>
+            <stringProp name="Argument.value">https://mock-mb-ob.meta-uat.nobubank.com/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN TRX" elementType="Argument">
+            <stringProp name="Argument.name">PIN TRX</stringProp>
+            <stringProp name="Argument.value">14 25 36</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PIN KARTU" elementType="Argument">
+            <stringProp name="Argument.name">PIN KARTU</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="phoneNo" elementType="Argument">
+            <stringProp name="Argument.name">phoneNo</stringProp>
+            <stringProp name="Argument.value">0811222117</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="email" elementType="Argument">
+            <stringProp name="Argument.name">email</stringProp>
+            <stringProp name="Argument.value">christopher.jordan@ddt.id</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="productCode" elementType="Argument">
+            <stringProp name="Argument.name">productCode</stringProp>
+            <stringProp name="Argument.value">161</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="customerData" elementType="Argument">
+            <stringProp name="Argument.name">customerData</stringProp>
+            <stringProp name="Argument.value">704e4547a2f77c472467de4744db8ed8101c685bb12d25f7eace91ef2a5f71ee91fed116e8b5ce7a610e4da826470c7f92e29afcc7f34f797271ce20048a8d94328db3a8a07b36f873aa4492fc77a63eaca7ae24ee99e76ab46b1e86ced011ef3a8a7db2bd9e5bed17fdbb47e44bff80bb3f9d3e6aa5bed95469725e7eaf63b2ee39431bdb0269683bfd6da64a94c2922fad65ce61f2d4ef992bf21ee75a153691a420112ab6ee985ccd4d6314d4a39e9c8ccc94cf528f8e5c0180e26a5223cfa664388c252d0857fb514207ea208ff423f757795d9666de993f0f71a11f8f61cadee2a18e6da15114669980c6e2df4c46e76039e8ed769c28d9ad57ac5fb77f1221e377cb5bf7d7550096fa9db7ec51a5381e514d1eff891558fb50b0100b58d8c620804b0aba64c5e44490d11b78c925d86afc708048b5673d924eb415e396327c3ca5a7557213d00910e0aa60966ab6ddc60363a2013f495e0f1e6c72afc3fbac0a293d03970280b6ce71cee16275c9e3291b250b10edc35b8e1214000ea18b544d01445675d1fbf88c7ecbbbfa00127b756630b5f180ce97b460d5e39d40c9b59dab1b5a6711661f8095830c1ec318ad48f7b4854fa5abb847e7c0cb5dfa8b2bb6c629c11fd0a25a11ed4d0c3736b2deb0904bd20d8f64263b6b6c03ae805967e0819ee264215d85848602480adadb2bc0479a068e6f39a8f62de6d823ef894a105676b324b065e8d7a4039ff74ad8cc2b5824ff6336ffeed4aa5feadd5e37540d549a9cb0ba14b791f41be3c3849c00f2c86e90fdda181ad65db273ea77a0132cdba8ca75ba93c41a99bdadbd4d43b4b7c541478d8136d2158f12bc9879401c03af92aec1cf69ffd10d18e3238e0398b6d99fbce388c837fcac13720ddb9be3f36c8d9edcda09e2f5f667b02648ba37c9447a0580d79c9735f1418341c56285d9a6d5b022b1749fc1d61ddf4ae25a91efbbf76522b28e8d41d1d058d9a3f31e2b630b8486e257d14d51638c7d0479ad3b4d4d1f1deda7c401293c24fbdd94b39c5cad3a2e71930863a2f011e61f20b1b03a77002790495ae2ac32acedacf196b0e525784215a59d97bd7c303e2c5a11ffa452374af701303054451c4083d091deafa6fab90fa9cc625edbe4e9c58718e20e854f11b3e78de38f349cab200068e37f054559e10e023f4ddef2caa1a392e2afd4e066c658efad49c5f0cafc5c08e4d36b513c09125d5aed8a5a4f91a0af362681e878c419ca5fca7b8c65aa2624ca659337e2ce9b5412b809939cbb</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="nik" elementType="Argument">
+            <stringProp name="Argument.name">nik</stringProp>
+            <stringProp name="Argument.value">3277222512902317</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cif" elementType="Argument">
+            <stringProp name="Argument.name">cif</stringProp>
+            <stringProp name="Argument.value">260511113939000 </stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountNo" elementType="Argument">
+            <stringProp name="Argument.name">accountNo</stringProp>
+            <stringProp name="Argument.value">81100227401</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="accountId" elementType="Argument">
+            <stringProp name="Argument.name">accountId</stringProp>
+            <stringProp name="Argument.value">111720958937</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+        <stringProp name="TestPlan.comments">Phone : 0811222114</stringProp>
+      </Arguments>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <stringProp name="TestPlan.comments">https://2c7850aded434dae91c9a19075fbd877.api.mockbin.io
+https://688358d521fa24876a9dbb73.mockapi.io</stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="[Batam] Get token b2b and b2b2c" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get token b2b" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;grantType&quot;: &quot;client_credentials&quot;,&#xd;
+    &quot;additionalInfo&quot;: {&#xd;
+        &quot;partnerId&quot;: &quot;${partnerId}&quot;&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v2.0/access-token/b2b/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-CLIENT-KEY</stringProp>
+                <stringProp name="Header.value">${clientId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(2022000000000,2022999999999)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.113</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">APIMGM</stringProp>
+              </elementProp>
+              <elementProp name="X-SIGNATURE" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${signature}</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.security.*;
+import java.security.spec.*;
+import java.util.Base64;
+
+String privateKeyString = &quot;${privateKey}&quot;;
+String applyToken = &quot;${clientId}&quot;+&quot;|&quot;+&quot;${__property(time)}&quot;;
+
+// Remove the BEGIN and END lines, and any newline characters
+privateKeyString = privateKeyString.replaceAll(&quot;-----BEGIN RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;-----END RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;\n&quot;, &quot;&quot;)
+        .replaceAll(&quot; &quot;, &quot;&quot;)
+        .replaceAll(&quot;\r&quot;, &quot;&quot;)
+
+// Decode base64
+byte[] privateKeyBytes = Base64.getDecoder().decode(privateKeyString);
+
+// Generate PrivateKey object
+EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
+KeyFactory kf = KeyFactory.getInstance(&quot;RSA&quot;);
+PrivateKey privateKey = kf.generatePrivate(privKeySpec);
+
+def generateSignature(String input, PrivateKey privateKey) {
+    try {
+        Signature signature = Signature.getInstance(&quot;SHA256withRSA&quot;);
+        signature.initSign(privateKey);
+        signature.update(input.getBytes(&quot;UTF-8&quot;));
+        byte[] signedBytes = signature.sign();
+        return Base64.getEncoder().encodeToString(signedBytes);
+    } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException | UnsupportedEncodingException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
+
+def signature = generateSignature(applyToken, privateKey);
+vars.put(&quot;signature&quot;, signature);
+
+log.info(&quot;applyToken: &quot;+ applyToken);
+log.info(&quot;signature: &quot;+ signature);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="false">
+            <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.accessToken</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <BeanShellAssertion guiclass="BeanShellAssertionGui" testclass="BeanShellAssertion" testname="BeanShell Assertion" enabled="false">
+            <stringProp name="BeanShellAssertion.query">${__setProperty(b2b,${token})}</stringProp>
+            <stringProp name="BeanShellAssertion.filename"></stringProp>
+            <stringProp name="BeanShellAssertion.parameters"></stringProp>
+            <boolProp name="BeanShellAssertion.resetInterpreter">true</boolProp>
+          </BeanShellAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+vars.put(&quot;b2b&quot;, json.accessToken);
+props.put(&quot;b2b&quot;, json.accessToken);
+
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get token b2b2c" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;grantType&quot;: &quot;client_credentials&quot;,&#xd;
+  &quot;authCode&quot;: &quot;${authCode}&quot;,&#xd;
+  &quot;refreshToken&quot;: &quot;&quot;&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v2.0/access-token/b2b2c/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(202000000000,202100000000)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">192.168.1.2</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">APIMGM</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${signature}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+              <elementProp name="X-CLIENT-KEY" elementType="Header">
+                <stringProp name="Header.name">X-CLIENT-KEY</stringProp>
+                <stringProp name="Header.value">${clientId}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+def builder = new JsonBuilder(request)
+def databody = JsonOutput.toJson(builder.content)
+def method = sampler.getMethod();
+def apikey = props.get(&quot;b2bToken&quot;);
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+
+//log.info(&quot;b2b token: &quot; + props.get(&quot;b2bToken&quot;))
+
+def signature = hmacSHA
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey/b2bToken: &quot;+ apikey);
+log.info(&quot;secretKey: &quot; + secretKey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+vars.put(&quot;sign&quot;, hmacSHA);
+
+// Calculate the HMAC-SHA-512 hash
+println(&quot;Calculated HMAC-SHA-512: $hmacSHA&quot;)
+// Compare with the provided signature
+if (hmacSHA == signature) {
+    log.info(&quot; &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Signature matches. Request integrity is verified.&quot;)
+} else {
+    log.info(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; Signature does not match. Request integrity is compromised.&quot;)
+}
+
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.security.*;
+import java.security.spec.*;
+import java.util.Base64;
+
+String privateKeyString = &quot;${privateKey}&quot;;
+String applyToken = &quot;${clientId}&quot;+&quot;|&quot;+&quot;${__property(time)}&quot;;
+
+// Remove the BEGIN and END lines, and any newline characters
+privateKeyString = privateKeyString.replaceAll(&quot;-----BEGIN RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;-----END RSA PRIVATE KEY-----&quot;, &quot;&quot;)
+        .replaceAll(&quot;\n&quot;, &quot;&quot;)
+        .replaceAll(&quot; &quot;, &quot;&quot;)
+        .replaceAll(&quot;\r&quot;, &quot;&quot;)
+
+// Decode base64
+byte[] privateKeyBytes = Base64.getDecoder().decode(privateKeyString);
+
+// Generate PrivateKey object
+EncodedKeySpec privKeySpec = new PKCS8EncodedKeySpec(privateKeyBytes);
+KeyFactory kf = KeyFactory.getInstance(&quot;RSA&quot;);
+PrivateKey privateKey = kf.generatePrivate(privKeySpec);
+
+def generateSignature(String input, PrivateKey privateKey) {
+    try {
+        Signature signature = Signature.getInstance(&quot;SHA256withRSA&quot;);
+        signature.initSign(privateKey);
+        signature.update(input.getBytes(&quot;UTF-8&quot;));
+        byte[] signedBytes = signature.sign();
+        return Base64.getEncoder().encodeToString(signedBytes);
+    } catch (NoSuchAlgorithmException | InvalidKeyException | SignatureException | UnsupportedEncodingException e) {
+        e.printStackTrace();
+        return null;
+    }
+}
+
+def signature = generateSignature(applyToken, privateKey);
+vars.put(&quot;signature&quot;, signature);
+
+log.info(&quot;applyToken: &quot;+ applyToken);
+log.info(&quot;signature: &quot;+ signature);</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+props.put(&quot;b2b2cValue&quot;, json.accessToken);
+
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">false</stringProp>
+          <stringProp name="script">String res=prev.getResponseDataAsString();
+String req = sampler.getArguments().getArgument(0).getValue().toString();
+String responseHeader= prev.getResponseHeaders();
+String url = sampler.getUrl();
+String requestHeader = sampler.getHeaderManager().getHeaders().toString();
+
+String folder = &apos;${pathFolder}&apos;;
+String env = &apos;${env}&apos;;
+String name = &apos;${__threadGroupName}&apos;;
+
+File f = new File(folder + env + &apos; - &apos;+name + &apos;.txt&apos;);
+FileWriter fstream = new FileWriter(f.getPath(),true);
+
+fstream.write(&apos;\n&apos;);
+fstream.write(&apos;URL: &apos; + url + &apos;\n&apos;);
+fstream.write(&apos;\nREQUEST HEADER: \n\n&apos;);
+for (int i = 0; i &lt; sampler.getHeaderManager().size(); i++) {
+    String header = sampler.getHeaderManager().getHeader(i)
+    fstream.write(header + &apos;\n&apos;);
+}
+
+fstream.write(&apos;\nREQUEST BODY: \n\n&apos; + req + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE HEADER: \n\n&apos;+ responseHeader + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE BODY: \n\n&apos;+ res + &apos;\n&apos;);
+fstream.write(&apos;\n\n---------------------------------------------------------------------------------------\n\n&apos;);
+fstream.close();</stringProp>
+        </JSR223PostProcessor>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="[Batam] Balance Inquiry" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Balance Inquiry" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;partnerReferenceNo&quot;: &quot;${__property(timeRef)}&quot;,&#xd;
+  &quot;accountNo&quot;: &quot;${accountNo}&quot;,&#xd;
+  &quot;additionalInfo&quot;: {}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/v1.0/balance-inquiry/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">    &quot;creditApplicationId&quot;: &quot;${accountId}${__property(consentId)}&quot;,</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+def builder = new JsonBuilder(request)
+def databody = JsonOutput.toJson(builder.content)
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + secretKey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+
+
+import org.apache.commons.lang3.RandomStringUtils
+def randomExternalId = RandomStringUtils.randomNumeric(12)
+// store globally
+props.put(&quot;externalId&quot;, randomExternalId)
+log.info(&quot;GLOBAL externalId created: &quot; + randomExternalId)</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__property(externalId)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">${ipAddress}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization-Customer</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b2cValue)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+            <stringProp name="TestPlan.comments">${__property(externalId)}</stringProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+vars.put(&quot;partnerReferenceNo&quot;, jsonRequest.partnerReferenceNo);
+vars.put(&quot;referenceNo&quot;, json.referenceNo);
+
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Check Status" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+  &quot;originalPartnerReferenceNo&quot;: &quot;${partnerReferenceNo}&quot;,&#xd;
+  &quot;originalReferenceNo&quot;: &quot;${referenceNo}&quot;,&#xd;
+  &quot;originalExternalId&quot;: &quot;${__property(externalId)}&quot;,&#xd;
+  &quot;serviceCode&quot;: &quot;06&quot;,&#xd;
+  &quot;additionalInfo&quot;: {&#xd;
+    &quot;accountId&quot;: &quot;${accountId}&quot;,&#xd;
+    &quot;phoneNo&quot;: &quot;${phoneNo}&quot;,&#xd;
+    &quot;email&quot;: &quot;${email}&quot;,&#xd;
+    &quot;productCode&quot;: &quot;${productCode}&quot;&#xd;
+  }&#xd;
+}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlBatam}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/cobrand-saving/activation/v1.0/registration-account-inquiry/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def request = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString()) 
+def builder = new JsonBuilder(request)
+def databody = JsonOutput.toJson(builder.content)
+def method = sampler.getMethod();
+def apikey = &quot;${__property(b2b)}&quot;;
+def time = &quot;${__property(time)}&quot;;
+def path = sampler.getUrl().getPath();
+def secretKey = &quot;${clientSecret}&quot;;
+def sha256 = org.apache.commons.codec.digest.DigestUtils.sha256Hex(databody);
+def hmacdata = method + &quot;:&quot; + path + &quot;:&quot; + apikey + &quot;:&quot; + sha256 + &quot;:&quot; + time;
+def hmacSHA = org.apache.commons.codec.digest.HmacUtils.hmacSha512Hex(secretKey, hmacdata);
+
+log.info(&quot;databody: &quot;+ databody);
+log.info(&quot;apikey: &quot; + secretKey);
+log.info(&quot;hmacdata: &quot; + hmacdata);
+log.info(&quot;signature: &quot; + hmacSHA);
+log.info(&quot;time: &quot;+ time);
+
+vars.put(&quot;sign&quot;, hmacSHA);
+//sampler.getArguments().getArgument(0).setValue(databody)
+
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-TIMESTAMP</stringProp>
+                <stringProp name="Header.value">${__property(time)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-EXTERNAL-ID</stringProp>
+                <stringProp name="Header.value">${__Random(000000000000,999999999999)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-PARTNER-ID</stringProp>
+                <stringProp name="Header.value">${partnerId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CHANNEL-ID</stringProp>
+                <stringProp name="Header.value">${obkchannelId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-DEVICE-ID</stringProp>
+                <stringProp name="Header.value">${deviceId}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-IP-ADDRESS</stringProp>
+                <stringProp name="Header.value">${ipAddress}</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">X-SIGNATURE</stringProp>
+                <stringProp name="Header.value">${sign}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization-Customer</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(b2b2cValue)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper;
+import groovy.json.JsonOutput
+import groovy.json.JsonBuilder
+import org.apache.commons.codec.digest.DigestUtils
+
+def jsonRequest = new JsonSlurper().parseText(sampler.getArguments().getArgument(0).getValue().toString());
+def json = new groovy.json.JsonSlurper().parseText(prev.getResponseDataAsString())
+def builder = new JsonBuilder(json)
+
+
+log.info(JsonOutput.toJson(builder.content))
+prev.setResponseData(JsonOutput.prettyPrint(JsonOutput.toJson(builder.content)), &quot;UTF-8&quot;)</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">false</stringProp>
+          <stringProp name="script">String res=prev.getResponseDataAsString();
+String req = sampler.getArguments().getArgument(0).getValue().toString();
+String responseHeader= prev.getResponseHeaders();
+String url = sampler.getUrl();
+String requestHeader = sampler.getHeaderManager().getHeaders().toString();
+
+String caseName = sampler.getName();
+String folder = &apos;${pathFolder}&apos;;
+String env = &apos;${env}&apos;;
+String name = &apos;${__threadGroupName}&apos;;
+
+File f = new File(folder + env + &apos; - &apos;+name + &apos;.txt&apos;);
+FileWriter fstream = new FileWriter(f.getPath(),true);
+
+fstream.write(&apos;\n&apos;);
+fstream.write(&apos;CASE : \n\n&apos; + caseName + &apos;\n\n&apos;);
+fstream.write(&apos;URL: &apos; + url + &apos;\n\n&apos;);
+fstream.write(&apos;\nREQUEST HEADER: \n\n&apos;);
+for (int i = 0; i &lt; sampler.getHeaderManager().size(); i++) {
+    String header = sampler.getHeaderManager().getHeader(i)
+    fstream.write(header + &apos;\n&apos;);
+}
+
+fstream.write(&apos;\nREQUEST BODY: \n\n&apos; + req + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE HEADER: \n\n&apos;+ responseHeader + &apos;\n&apos;);
+fstream.write(&apos;\nRESPONSE BODY: \n\n&apos;+ res + &apos;\n&apos;);
+fstream.write(&apos;\n\n---------------------------------------------------------------------------------------\n\n&apos;);
+fstream.close();</stringProp>
+        </JSR223PostProcessor>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
