@@ -1,0 +1,3 @@
+#!/bin/bash
+#HEAP="-Xms1g -Xmx4g -XX:MaxMetaspaceSize=256m"
+JAVA_HOME="/opt/homebrew/opt/openjdk" exec "/opt/homebrew/Cellar/jmeter/5.5/libexec/bin/jmeter"  "$@"
