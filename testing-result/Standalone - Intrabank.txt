@@ -1,0 +1,110 @@
+
+URL: https://sandbox-api.nobubank.com/v1.0/account-inquiry-internal/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-12T11:17:42+07:00
+X-EXTERNAL-ID	202226809784
+X-PARTNER-ID	92627ecce59e4dbabb4afbd53ec2e420
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	ZU
+Content-Type	application/json
+X-SIGNATURE	9962f232b7e45eb581d68c5eee329ec5465dc84ea59dc7c66a4a31f3179cccb4e3336aae84a20a1fe20ccce7e499e1a1e68828fc0e649f81331beee839cdd3d4
+X-DEVICE-ID	083794111004
+Authorization	Bearer MZDMNDUWMDGTMDGYMC0ZNMFILTKZOGETMMI0MGUZMMVIZJZH
+
+REQUEST BODY: 
+
+{
+  "partnerReferenceNo": "202380970783",
+  "beneficiaryAccountNo": "10110271117",
+  "additionalInfo": {}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 12 Jun 2026 04:36:26 GMT
+Content-Type: application/json
+Content-Length: 306
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"additionalInfo":{"sourceAccountName":"LAURA MAYLAF A'IZA INDRIA PUTRI"},"beneficiaryAccountName":"KRISTIAN SANTOSO","beneficiaryAccountNo":"10110271117","partnerReferenceNo":"202380970783","referenceNo":"672018029255","responseCode":"2001500","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/v1.0/transfer-intrabank/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-12T11:17:43+07:00
+X-EXTERNAL-ID	202263170588
+X-PARTNER-ID	92627ecce59e4dbabb4afbd53ec2e420
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	ZU
+Content-Type	application/json
+X-SIGNATURE	628e23b957a432001dafb1c8364fe226afa11de91ebcbc497030720976729a5f463848ea6a78ec1eab9f55c6f493dd7eb6daf94f4a96e5534d49d3994c55b08f
+X-DEVICE-ID	083794111004
+Authorization	Bearer MZDMNDUWMDGTMDGYMC0ZNMFILTKZOGETMMI0MGUZMMVIZJZH
+
+REQUEST BODY: 
+
+{
+    "partnerReferenceNo": "202380970783",
+    "amount": {
+        "value": "123555.00",
+        "currency": "IDR"
+    },
+    "beneficiaryAccountNo": "10110271117",
+    "beneficiaryEmail": "",
+    "currency": "IDR",
+    "customerReference": "672018029255",
+    "feeType": "",
+    "remark": "meli",
+    "sourceAccountNo": "10110889307",
+    "transactionDate": "2026-06-12T11:17:43+07:00",
+    "additionalInfo": {
+        "sourceAccountName": "LAURA MAYLAF A'IZA INDRIA PUTRI",
+        "beneficiaryAccountName": "KRISTIAN SANTOSO"
+    }
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 403 Forbidden
+Server: nginx
+Date: Fri, 12 Jun 2026 04:36:26 GMT
+Content-Type: application/json
+Content-Length: 123
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4031715","responseMessage":"Transaction not permitted [sourceAccountNo should be the same with Inquiry]"}
+
+
+
+---------------------------------------------------------------------------------------
+

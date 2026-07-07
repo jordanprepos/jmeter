@@ -1,0 +1,2784 @@
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-10T14:48:30+07:00
+X-EXTERNAL-ID	202231152277
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	c63963478d379337a1309d87a94d7c6d1819d000f09d2e18f3e43d4d90285b856da91154338d4c48c255968ca88f9acc3f539e8f37546c8e8675632a77819b9e
+X-DEVICE-ID	hotfix-device-z
+Authorization-Customer	Bearer EV5ahmUgsyqntjSjvLQcvZ__vRclOO-s3bPsFve4x2xIW3n_HDe6LAcWPfaklxaAoPpJ5a3qOZfSDoOvk-DAmlIxcVb8ueQ7DQdzIqUfFmb7X3RDpi0BrszxNiRujVRAcp9Yk9efZ00dLCPfonR15U8UZuCEfSKFx4BTMv8TsY3ER4yqtOT4aqTTdh2aLJxDjw8hPt0vpUibj32LvBskqabHCx8iAVpQnlHQz8u8_iFC_EK-zOtBKuLN7hhLNtm4-jy5sIWWcrSu17mr1Rjezw==
+Authorization	Bearer NWU2YJGZNTKTMWE4YY0ZMDDJLTK4NTATY2NMODGZNZQ5NJDL
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"112138977945",
+	"additionalInfo": {
+		"accountId": "111838576957"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 10 Jun 2026 08:07:11 GMT
+Content-Type: application/json
+Content-Length: 247
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"5000000.00"},"balanceType":"Cash"}],"name":"HOTFIX DEVICE X","partnerReferenceNo":"112138977945","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:22:00+07:00
+X-EXTERNAL-ID	202246199038
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	f67f346fc2369172a3fa4d0609a347c949a4a8b0796795bafd28ce4adaab69a839fc6c5ecb1586438e318e8a49103bde3f3b97847044123d1813f1d8e7024c27
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 7PPiv6PZ7ps5e-rkxhNz3iSgtpFnsglHhVVy9VOuSvgAtQlM2Y17X6kBceO4yatbYhG1B2Pr-z13Lfn6-5HJ6krdhTPKz5oSs7PbSarIWmQN_qTn5ehMak_SV0i8zrpiavTk8w2MkaUVFGpWpfTWpRmEfSmWl3bs9PkYjiqhhJWYs-dClX_33OvcACoEscsLOFNDL-JFTtLTs0zwd8B2INBLN4hxVSNnJWUDxeOGBRXFk4QCWiw019OL1VazdAHMk4aZ9GbzblWADgfc2qqI5Q==
+Authorization	Bearer MJY2NJKWNTKTYWRKYI0ZMJGZLWEZNTUTNTJJODGYMZZHNTNH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"111634015281",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 03:40:48 GMT
+Content-Type: application/json
+Content-Length: 249
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"63231982.00"},"balanceType":"Cash"}],"name":"UAT CARD SERVICE","partnerReferenceNo":"111634015281","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:22:53+07:00
+X-EXTERNAL-ID	202249521395
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	8ff16bb20635b1ae94274df50bc7aaa5d654ded031b8df17df48658b3afbde276e007c233df3cccd785f1bf80fcd89ff48825cab35dba6c4b6524e47a5795e4d
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 7PPiv6PZ7ps5e-rkxhNz3iSgtpFnsglHhVVy9VOuSvgAtQlM2Y17X6kBceO4yatb3R376Iw4Y4muADTnCqiUThzQumRQV71-J8cGi6Gbcfv_NVwrEfYhoWGUIzGBT342q7E03d5hBEFA4wm3S5zcnhgxtYreBF-TTiMTiGCVHs7NylTvKHKU7c9rSueBeUZB50Siq2oJjkGvEMlYDB2GCr2jKO2-kticb8JCkKsC7PuYpTi7gAk-7KYiIXh3KOzSResB81FvJmc3NEh7NYNGGA==
+Authorization	Bearer ZDBMNTIWZDUTYTYZYY0ZNGVLLWJKODYTNDK0ZJRMY2I5MZE3
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"118321280598",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 03:41:42 GMT
+Content-Type: application/json
+Content-Length: 249
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"63231982.00"},"balanceType":"Cash"}],"name":"UAT CARD SERVICE","partnerReferenceNo":"118321280598","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:27:06+07:00
+X-EXTERNAL-ID	202212033321
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	961181d057f7b928f1ddbefac4a02ae3fddcc1b145e4a91f6b473413324f32e79e7ed477c8ab9a291d9d866891243ed62e53fa3741b70857f83dd5ee7e6fc6bc
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 7PPiv6PZ7ps5e-rkxhNz3iSgtpFnsglHhVVy9VOuSvgAtQlM2Y17X6kBceO4yatb3R376Iw4Y4muADTnCqiUThzQumRQV71-J8cGi6Gbcfv_NVwrEfYhoWGUIzGBT342q7E03d5hBEFA4wm3S5zcnhgxtYreBF-TTiMTiGCVHs7NylTvKHKU7c9rSueBeUZB50Siq2oJjkGvEMlYDB2GCr2jKO2-kticb8JCkKsC7PuYpTi7gAk-7KYiIXh3KOzSResB81FvJmc3NEh7NYNGGA==
+Authorization	Bearer ZDBMNTIWZDUTYTYZYY0ZNGVLLWJKODYTNDK0ZJRMY2I5MZE3
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110057658008",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:29:41+07:00
+X-EXTERNAL-ID	202205581742
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	d669292877e6dbdbf9fc021fcfddf8ab423893aab4e78e86a3680a38e7efb573c4fc54587fdbe75d537e245c536ab772c87114b462585cc9ac14ef35de25c152
+X-DEVICE-ID	device-ds01
+Authorization-Customer	Bearer 7PPiv6PZ7ps5e-rkxhNz3iSgtpFnsglHhVVy9VOuSvgAtQlM2Y17X6kBceO4yatb3R376Iw4Y4muADTnCqiUThzQumRQV71-J8cGi6Gbcfv_NVwrEfYhoWGUIzGBT342q7E03d5hBEFA4wm3S5zcnhgxtYreBF-TTiMTiGCVHs7NylTvKHKU7c9rSueBeUZB50Siq2oJjkGvEMlYDB2GCr2jKO2-kticb8JCkKsC7PuYpTi7gAk-7KYiIXh3KOzSResB81FvJmc3NEh7NYNGGA==
+Authorization	Bearer ZDBMNTIWZDUTYTYZYY0ZNGVLLWJKODYTNDK0ZJRMY2I5MZE3
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"115138432242",
+	"additionalInfo": {
+		"accountId": "111186403651"
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:33:18+07:00
+X-EXTERNAL-ID	202268585254
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	309a3ea3a8e69543091b10e75248186f49c86101ad2dfa8316c5cc10cbe0b81769740dd6391fad86121e90c2a64e08195ea866a524e7912b80cc74a258d3ba91
+X-DEVICE-ID	081212175005
+Authorization-Customer	Bearer 7PPiv6PZ7ps5e-rkxhNz3iSgtpFnsglHhVVy9VOuSvgAtQlM2Y17X6kBceO4yatb3R376Iw4Y4muADTnCqiUThzQumRQV71-J8cGi6Gbcfv_NVwrEfYhoWGUIzGBT342q7E03d5hBEFA4wm3S5zcnhgxtYreBF-TTiMTiGCVHs7NylTvKHKU7c9rSueBeUZB50Siq2oJjkGvEMlYDB2GCr2jKO2-kticb8JCkKsC7PuYpTi7gAk-7KYiIXh3KOzSResB81FvJmc3NEh7NYNGGA==
+Authorization	Bearer ZDBMNTIWZDUTYTYZYY0ZNGVLLWJKODYTNDK0ZJRMY2I5MZE3
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"117425631595",
+	"additionalInfo": {
+		"accountId": ""
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:40:56+07:00
+X-EXTERNAL-ID	202287498035
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	0664d538bc3720b0772369c3955d209fc10893ad0b700e86a2a6bf0554a87a40cf03a592720fe9d97c06b2dd9d55788057f0b86726232ceecfa17024751ff04f
+X-DEVICE-ID	audi-device-6661
+Authorization-Customer	Bearer g-SEB6-BNP8t5m4QzGlDY1OzcvAGpCnIJWw_Z7_CDOjXc2SYsKg8xRFl8aBBuUcHK0E3oh2lhAqXi78veKtDtYPj7nrsv_MXvzt82_V9yywHI9UFBvJiUR8fOkwgg-XOAytLIrzk-rAXNZNXvsS24oYTVhyu_Kr7SFOfe68F4XqVIMdkoZMhkCvbEmggM5zB6zBerjdrSf8BwI-MZABHqdq4gG0PGlctw1C8s4Bi1j8Y6wCpHDyeUo6l3FbOuqF1Z4AiwiIpzE-Vlyy9xBL88w==
+Authorization	Bearer MWU2MZGYY2MTMZBJZI0ZZMI4LWI0ZGYTNWQ3ZWE5ZWYYNME1
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"115531407111",
+	"additionalInfo": {
+		"accountId": "111821148607"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 401 Unauthorized
+Server: nginx
+Date: Mon, 15 Jun 2026 03:59:45 GMT
+Content-Type: application/json
+Content-Length: 87
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4011104","responseMessage":"Unauthorized - Customer Token Not Found"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:41:30+07:00
+X-EXTERNAL-ID	202235262755
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	4bfc70cea320f1e9a897a329b9ad0a54d8442b65ce88de72be3665594f48815fcb4c4a5b0c26489aa9bb41e6193283b75025a5465a4f92677badf2dfe99522d5
+X-DEVICE-ID	0819788727639
+Authorization-Customer	Bearer PuqzLnH7OR8yodWQq6qx7gdSnZBXbYc4RZuXHO_VGFcPaa5GjC99tUYyjkk0RfvWQdkkY5klhm-yl0mgqFsJlIwALw0OHJIG3Vb5FO9_iDR7rfZBVGXGMWM0rViBz9rp7RrvllQz7ndDjt72qUva-aDHi11erab4_PRkE-rBzuJ7wtN-Zna7uEHLb1DHxsryRkZiLON_0hk9v2hPwmAWjV4h3ok9TDiBd7NJN-k1MhaTITks_fgJFwMM-K2ZA_qEXT7OjDpmSo_lH_cGjazMEQ==
+Authorization	Bearer YTA5NJQXNZUTOGQZMC0ZOGZLLWJJZMUTOTC4NMIZM2M4MTJH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110588088792",
+	"additionalInfo": {
+		"accountId": "111116264463"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:00:18 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"7025000.00"},"balanceType":"Cash"}],"name":"RAYANDA","partnerReferenceNo":"110588088792","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:41:52+07:00
+X-EXTERNAL-ID	202208723567
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	83ae4965ad9a5ff1fe9922cfed0607717f7abb4ace06d52a5da7b3178296e7f50bb9e82f34bf743b432fdabee24f101de765490cd832e37285f3c6b46f62dd4b
+X-DEVICE-ID	0819788727637
+Authorization-Customer	Bearer p0O7laKyMBGiYn0URozDaBAJAJizNIyu5tqsWu6ET9SOGl8onDvQBtvklXrNnJrb9LbHRFYk7Javjd7uPhOXV_ql6dfF-7o8NfmSbGyxljkBDzDKbCz8_nxCf-nu_znMLPOL7vDlWLqJ5IMsoZJsSkKG_9BEIl3U6Tu-84Qs86xf52f931DIFCKgFHfl9QQ3jS2K-VL_VT-4QJMNhBiRjbAe8LaEPoStpky5jvrcMeG5Z6Yg-uuLJiGijkpWqyzqqTqvbLv6tTZVHtv7EbSFgg==
+Authorization	Bearer ODLHZJIYM2ETMTVJZC0ZOGZILWFKYZYTZMQ4MDYWNDA5ZDVH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110581375078",
+	"additionalInfo": {
+		"accountId": "111831833054"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:00:41 GMT
+Content-Type: application/json
+Content-Length: 246
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"13564000.00"},"balanceType":"Cash"}],"name":"INTAN AGUSTIN","partnerReferenceNo":"110581375078","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:46:10+07:00
+X-EXTERNAL-ID	202273882078
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	f9c68881b01d05bb6efaaa6f7a33be1dc0b4b9641e4811da6c6ac89e2bed49addec6264998477ee3e0b1f3d9be818ee591a5ea2c181ee260b7df179ecdf8c5c5
+X-DEVICE-ID	0819788727637
+Authorization-Customer	Bearer p0O7laKyMBGiYn0URozDaBAJAJizNIyu5tqsWu6ET9SOGl8onDvQBtvklXrNnJrb9LbHRFYk7Javjd7uPhOXV_ql6dfF-7o8NfmSbGyxljkBDzDKbCz8_nxCf-nu_znMLPOL7vDlWLqJ5IMsoZJsSkKG_9BEIl3U6Tu-84Qs86xf52f931DIFCKgFHfl9QQ3jS2K-VL_VT-4QJMNhBiRjbAe8LaEPoStpky5jvrcMeG5Z6Yg-uuLJiGijkpWqyzqqTqvbLv6tTZVHtv7EbSFgg==
+Authorization	Bearer ODLHZJIYM2ETMTVJZC0ZOGZILWFKYZYTZMQ4MDYWNDA5ZDVH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114024067855",
+	"additionalInfo": {
+		"accountId": "111831833054"
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T10:49:40+07:00
+X-EXTERNAL-ID	202272374550
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	06d169a7f2f9f800be7ac2a4268480ed8d704fbca69433c8b4e92fecb36ad964b4ac3b880e2d2bbfe5807b579257d20b4352e95bfc0ac845b7018a125c87c2f8
+X-DEVICE-ID	089688100207
+Authorization-Customer	Bearer p0O7laKyMBGiYn0URozDaBAJAJizNIyu5tqsWu6ET9SOGl8onDvQBtvklXrNnJrb9LbHRFYk7Javjd7uPhOXV_ql6dfF-7o8NfmSbGyxljkBDzDKbCz8_nxCf-nu_znMLPOL7vDlWLqJ5IMsoZJsSkKG_9BEIl3U6Tu-84Qs86xf52f931DIFCKgFHfl9QQ3jS2K-VL_VT-4QJMNhBiRjbAe8LaEPoStpky5jvrcMeG5Z6Yg-uuLJiGijkpWqyzqqTqvbLv6tTZVHtv7EbSFgg==
+Authorization	Bearer ODLHZJIYM2ETMTVJZC0ZOGZILWFKYZYTZMQ4MDYWNDA5ZDVH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"115533802311",
+	"additionalInfo": {
+		"accountId": "111993599878"
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:17:56+07:00
+X-EXTERNAL-ID	202225870805
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	8b4aabaac5fd2ae471ebee433b05f64739a2db8239299707e6e0cf011c1d3029ab8a80b035df9fddf06c7684b3925f2d1358a83f8c0328a691f64caf259269ba
+X-DEVICE-ID	0811222001
+Authorization-Customer	Bearer xIv_CuEzXiM9ezoxmOetF5qHNuXL9ly0EOCG1hVps0D-mKvbl-7DZQexRD4-kj8CL2HzU0TXYrSeStKY6ir2LHmITEjcaV5ZVxS6KRl4KzX0zizumzf5maiQSkXIvuNLYycgljbqgu8Fk5fB5aZxLbNyI4-YUlKmyvs67FpoMRh04dM_3jJN8yUDVzn7EvBCf32iO0CokcOIxsnBJTVY3zK1InlTfZOnJ9NF4HUisoMbg-Lh7uYHOjgL6ctkoTmrcVBCktZEeFGpRNkCoFVAOA==
+Authorization	Bearer ODHJMTA3NDKTMTLKMY0ZYWFMLTHJN2UTMGE3YZJINZYWZJC0
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"111334046722",
+	"additionalInfo": {
+		"accountId": "111574743288"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:36:44 GMT
+Content-Type: application/json
+Content-Length: 232
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"0.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"111334046722","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:19:03+07:00
+X-EXTERNAL-ID	202216707282
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	d6338fae529fb557e3505bf30a2b80a728c01328bb05c24d1524bbac4485fae6a93204d589313d575366e9591109db42a808eed2a7293c77ad3ae0172bfc2cd2
+X-DEVICE-ID	089688100207
+Authorization-Customer	Bearer BUn3X14lghFhoEGD86T7RU5Z6tYr6yahQhVegp6wc6e_Z3assxCx4WjqYboybHWItT0I9nvHJYWUkaRlypF9GimyaJhM17aM8_-NL7Z6Ir_lKy0caxEObXS5iGUwXVAsroBRy4FAjJb9FkJjHnTlDle8VoEt5RGDm035CZKnGhXMH_1ShMMNMn0KLLnfueKpAqNmuWgn-xIlsXcckax966w5fXk9ApMCxwCJTiBbsKh6bLaKBzV6NVDYF3SlRLT-9rEOpnYemonXYCqnTHGw5Q==
+Authorization	Bearer OGFHYMQWZDCTZTK2YI0ZZGQWLTG3YJYTZDBJZDGYYJEYYZI5
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"117259805950",
+	"additionalInfo": {
+		"accountId": "111993599878"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:37:51 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"51020000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"117259805950","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:19:20+07:00
+X-EXTERNAL-ID	202213841603
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	a854767223daa014f436912719f98391b828a90f1bc1055dd84c0e158b59dd302ce60f42c115999533d1d0ee321e26c50202d87c403524c31404660f3880a6a4
+X-DEVICE-ID	089688100207
+Authorization-Customer	Bearer BUn3X14lghFhoEGD86T7RU5Z6tYr6yahQhVegp6wc6e_Z3assxCx4WjqYboybHWIGagyZvd0rtXmTxPqS0oTlHDSb_KyGcHBkKlo2ZvXEamD2RujQAerMzy1CHZJtVISpA1lV9dbEIbRgpnuIomOyJrmZk1vhyonrOsfsU--wIYvOyaDC4g0BpPqAaW0W9oYzU9qv5ykKY3dxzf9A8S8iTMcitSsRIyP_gKi9Y3rsj60o06dDZble4w5CTnRdLRXyS8rtDjGTXJyEVtwwHQjkg==
+Authorization	Bearer ZDIXODKYZJYTMDI0MC0ZZTQ1LTLHZGQTMGQYYTU5N2M3MZZH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110547051659",
+	"additionalInfo": {
+		"accountId": "111993599878"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:38:08 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"51020000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"110547051659","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:26:34+07:00
+X-EXTERNAL-ID	202243829313
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	3fa7a12fb89906c7b0f54f34440efb8ff3242f32a864813ae9912493c8cfff0f0ad0e35e8c4d8cc1a6a0f2421c236840d0f09608ffa33edc3401763bc6c07fcf
+X-DEVICE-ID	089688100207
+Authorization-Customer	Bearer BUn3X14lghFhoEGD86T7RU5Z6tYr6yahQhVegp6wc6e_Z3assxCx4WjqYboybHWIn6Klsm0OEcsegklNLiNQ2KRsROlrzqk7jnO-d-v30_iwtxqg6iIJsDwWFFY7K4eBrbaLsY6-XHJsV3GQ6JlHRPzxrBUcFar15BbouUOPgiC1HU1K209aY5825XKV_-VI1MjuQaT0F6USuKR_VtFWXNEb6gxyK05uucjipBU5N3yTBPq0P8nry14nqsblQZvG6_NFdQKQggTsonFC7fS3qw==
+Authorization	Bearer MZK3NDZJM2QTMGE4NS0ZNWEXLWJKNWUTZTG0NGJIMWVIZGYX
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"111281440732",
+	"additionalInfo": {
+		"accountId": "111993599878"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:45:22 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"51020000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"111281440732","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:26:44+07:00
+X-EXTERNAL-ID	202284011074
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	2ed26acbe432dcf02c3ac49977819c7322b9a8212b3871626bd209ece79a428fb7e1026287191a4cab71091176697ea4491bd23d1a10af202cea06d8009f9b7b
+X-DEVICE-ID	0811222001
+Authorization-Customer	Bearer xIv_CuEzXiM9ezoxmOetF5qHNuXL9ly0EOCG1hVps0D-mKvbl-7DZQexRD4-kj8ChqA5xkuMAWtF9w0dj8ZcjZWUGKUqnBgY0ifRN_lLEM_JzMl63KlZW0xFKNOM3HW5H-qA052DK18UG4Dc_Ltqa_VQVgHhBIBMLrppvejq4J0Ah8b2B60AJznDBxIaLz6JAEv6mqQzZAq9rStix42H3PL82j6l-BwlriHqdSWOky4MAVd5JwIFuBFCXKeN7jz7P7wdprHqPGyiUiJzKQ4-AQ==
+Authorization	Bearer YMIXZWFKZJCTMZZJMI0ZYMM0LTG5MJKTYJBINWJHMWQ4NJVH
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114910274579",
+	"additionalInfo": {
+		"accountId": "111574743288"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:45:32 GMT
+Content-Type: application/json
+Content-Length: 232
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"0.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"114910274579","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:28:21+07:00
+X-EXTERNAL-ID	202266765906
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	dcfa95726de2f2a2d6d0de6168eebc4fd2b6ba4f70b8592daa396a6ccfc4faadd46b40e2e8ac1cce6628f76cb27b27c2114089a243e93a8aea957597a71e78d1
+X-DEVICE-ID	0811222001
+Authorization-Customer	Bearer xIv_CuEzXiM9ezoxmOetF5qHNuXL9ly0EOCG1hVps0D-mKvbl-7DZQexRD4-kj8CBtVKAKsqhy0BsvF4O5N-lHC1MYte07sYzAtoA_gjjZuHGG3ZY_6JuUWYjn6JJ_kys5pjwglQnZ1G44p0O-lCxmdcytMTAQWXlfX5MxCnxcprceCkF6GX2W2pwl2GDUJj0I9eR8ANbkiWvHM9NfRKczZOFn3hjbZ-F0WhwJQ7m6SdQ8YCX4ozszRi3wq_qpR6_KvAyFr4e5rQ78I-HWot2w==
+Authorization	Bearer ZGI5MGMXZTYTMWVKZS0ZYTFILTG1YMUTMDA4ZDKWNZLJZMQY
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"116718044986",
+	"additionalInfo": {
+		"accountId": "111574743288"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:47:10 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"15000000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"116718044986","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T11:28:38+07:00
+X-EXTERNAL-ID	202202515621
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	28a57800102b20f24b0c94f819346bc276c3f32c2d3f2606958be99c41aaf5d08754d13f221a9e9ce61c1cda75cadf58b399fe5cfd8f76d0c391be8bfc669e61
+X-DEVICE-ID	089688100207
+Authorization-Customer	Bearer BUn3X14lghFhoEGD86T7RU5Z6tYr6yahQhVegp6wc6e_Z3assxCx4WjqYboybHWIoxqRhOhHzOhISRNRlJ5B2pFBBpXnWbIFPups-ybe9-eg6Zyq0vMFXAQmLRN93INnuA_CNjMmgckqnMD0euf92RDcGq_vDHw_PWWd3U1pe243XxUCY_5PJisByZJ7nLGfQjbeRLRlY_ZdvQwyrgt5sj0AlAC4aPAKSj7eOX_2AICjptnK8YWz_A_SmGAmPchGtzWtg_Og5zguD4_7xioKYQ==
+Authorization	Bearer ZDVHZWZHMJQTOTI0ZC0ZMWMWLTKZY2ITMJCXMWI2NJEWNZY3
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110802140314",
+	"additionalInfo": {
+		"accountId": "111993599878"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 04:47:26 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"51020000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"110802140314","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-15T13:26:41+07:00
+X-EXTERNAL-ID	202223712588
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	0b32c5fca2d62056ff92c18bcb715e8552ee337520a8e97634d3afc8d7c40657255a71b4eec607d85de051383a19cc9cf84ec886834d79f1c6b22c029306352c
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 7PPiv6PZ7ps5e-rkxhNz3iSgtpFnsglHhVVy9VOuSvgAtQlM2Y17X6kBceO4yatb8d4w_0zLOnD6lcG0xsgE1ycz-VVldDOEL6grbLfxJIoYPHU-J7Am0kjwzq--WbE-iCf1pjAD3d5mLDstnST17xL9mEsqcpLG6ImwDEcJbAxjgxgOz8xGgp55R2nD4-z84RLvoBybCRZK64YG3O83DocnL1xEsSZsNodkqv2DV8ewRMHtDfZNUBKumQ8IOAFnEmBVPDuRAfJ6g7Sv3oyYtg==
+Authorization	Bearer NZHMNMQ2MJATOGRHMC0ZNDQ0LWEYMJATMTQ5M2Q1OGJIMTNL
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114615147064",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 15 Jun 2026 06:45:29 GMT
+Content-Type: application/json
+Content-Length: 249
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"63231982.00"},"balanceType":"Cash"}],"name":"UAT CARD SERVICE","partnerReferenceNo":"114615147064","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-17T09:40:59+07:00
+X-EXTERNAL-ID	202205563354
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	10619a4d2c5240cc1ad9529a7cdd046a8bee1c8350c8f497e6ce40cf759d74c3a16f6155c58960511d6c7dbb402578aec45545558043b2a2bb46ae84944e0e56
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2G03Nd7wOv5XVm6zkoIWGwFyW63iyfDjBL71ME3jKAeH-LIU_Npx04a6wA-rRxXbluVrfC0PdcDcVU1qdiwcxZ7lOe1QnOMirDGFfUBp012McumFWXJdbDqlvOTlit8GVgggTNwkhbOYjuzaJINIWCa9nLIbEMXuQW1ATUha5D8nFejmrx5TMRGy_64O99TxVUC8SoB6NuUMIXI94JVBzy5A==
+Authorization	Bearer YZFJOTEWZDUTY2I1ZC0ZNDZHLTG5YTYTYMI5NZDHMZGWZJA3
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114391141624",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 17 Jun 2026 02:59:50 GMT
+Content-Type: application/json
+Content-Length: 249
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"63231982.00"},"balanceType":"Cash"}],"name":"UAT CARD SERVICE","partnerReferenceNo":"114391141624","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.1/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-17T16:49:22+07:00
+X-EXTERNAL-ID	202287066744
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	83f5a713b4f11d024063ab283b75e73ea21c6dd8117806e6fb15618b5070dea54833bd427759cfb8ad622de5d198452f9f23c06efc008af6edc50e1ea0aab340
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2GTn-XPgbsXRaFvBhDDD05PZxv7rJzc4wMHYRowB5WJmC5f7kySUUJPlB1umrwQ0ZdmDnWuMdxjIAafQqgc96STIfgfNxZlspluXNE8zOp8DoDRryoyii3xX9O7oq_i37orcpbwj7PELypFvpEv-zuP9KAgGeTmzEqYBfgvJfunP4BwW9gEVONteuSOml9-5bnZGO8WNHmSTCnS-LdQlBBFg==
+Authorization	Bearer MJRLZTY0ZDMTYZE0MS0ZMWZMLTGZOGYTYJYZMZDINJLMNJMX
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114360697954",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 504 Gateway Timeout
+Server: nginx
+Date: Wed, 17 Jun 2026 10:08:13 GMT
+Content-Type: application/json
+Content-Length: 55
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"5041100","responseMessage":"Timeout"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.1/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-17T16:53:07+07:00
+X-EXTERNAL-ID	202285114032
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	a25dc200ad453ff2523bf25d6a69fcf65eb92c4b53a6f2d760dd4e2c45cbfd69eead9db705869661b18207babe39a856f6f45aa2120b647c2087c56db40ef778
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2GTn-XPgbsXRaFvBhDDD05PZxv7rJzc4wMHYRowB5WJmC5f7kySUUJPlB1umrwQ0ZdmDnWuMdxjIAafQqgc96STIfgfNxZlspluXNE8zOp8DoDRryoyii3xX9O7oq_i37orcpbwj7PELypFvpEv-zuP9KAgGeTmzEqYBfgvJfunP4BwW9gEVONteuSOml9-5bnZGO8WNHmSTCnS-LdQlBBFg==
+Authorization	Bearer MJRLZTY0ZDMTYZE0MS0ZMWZMLTGZOGYTYJYZMZDINJLMNJMX
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"111899448927",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.1/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-17T16:53:49+07:00
+X-EXTERNAL-ID	202251615844
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	6b6f31b5d83fd3858aa4630a8d6535609f74e2be07081ee83a8c4021c1742686d90ae1cca71c39e6bd01cf3fce80afb2ec5420f90ef64c56140e26f4984fbf5a
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2GK0T7mwiJoZu0RCdTL8vgIrDr6uZsZ1P69_CVd_NEZTWVzA-Azx5VMqiLTVvzR-V9-q1pjtqRqb0-uE0iIYmQdl30kseyqhNIrT2TMwuF7kOyT1Pe4L5R4mpyryo8q21O39FgwGFNOyw6TwLQRz6StYBr7Aooa3UyS6wsx8Ucih693WLuTURZ3kRXpHJ75Kf9X8jEnHzEjWunKOCK6Z_p-Q==
+Authorization	Bearer YME1ZGIYOGITYJVMOS0ZNWIWLTG3ZMYTNTCZYMMYNZDIZDHJ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"113402726975",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 504 Gateway Timeout
+Server: nginx
+Date: Wed, 17 Jun 2026 10:12:40 GMT
+Content-Type: application/json
+Content-Length: 55
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"5041100","responseMessage":"Timeout"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.1/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-17T16:55:12+07:00
+X-EXTERNAL-ID	202277616791
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	c547d400f4bf65cae677e2245335672dc7085def6e237b7b2074c3f54aa1de15aa146090c786a5fd7580ac769988500b34407240662c0c2fe2d2aba399a221c7
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2GuS_JIL1Lg5jvmuGoClSTO6l3ma16zPI0hDYa7wLzavQRowwIyySYkxFJAK1Khr6abAKr3SNFVJrjTuk7AHo_dPXtQ5te0GEAw4cZps1Ntff9Ycts6T5HViSFQf5VQUkMNvHpDeHjB1wGcOIuv6enSi92idbsHfRAmsUgiRWGxaCPIzm5gC4DnY8CdpzeSvhL-H5SiRWMrhU_jyK6Q_i3uA==
+Authorization	Bearer MMY4NZFKYJQTM2Y4ZS0ZYMQ1LWJKOWMTZJE3NJK1YWQ3YMI4
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114759495333",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 504 Gateway Timeout
+Server: nginx
+Date: Wed, 17 Jun 2026 10:14:03 GMT
+Content-Type: application/json
+Content-Length: 55
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"5041100","responseMessage":"Timeout"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:25:43+07:00
+X-EXTERNAL-ID	111182261228
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+CHANNEL-ID	BOOSTID
+X-DEVICE-ID	0811222118
+X-IP-ADDRESS	192.168.2.52
+X-SIGNATURE	4ae8831625a2f552528c214f6ce9a05994063e58b371fbbc2690f081b0729d6f57294512e6d71cad974c6f023db4cc96898c266fa7784d9ef6430dc17c1e161c
+Content-Type	application/json
+Authorization	Bearer NZLKN2MYZDMTNGNMZC0ZZMJMLTKZZDCTMGRHMJAWNMJHZDI5
+
+REQUEST BODY: 
+
+{
+    "partnerReferenceNo":"995739627198",
+    "accountNo": "81100213566",
+    "additionalInfo": {
+        "description": ""
+    }
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Thu, 18 Jun 2026 07:44:36 GMT
+Content-Type: application/json
+Content-Length: 63
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4041111","responseMessage":"Invalid Account"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.1/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:36:12+07:00
+X-EXTERNAL-ID	202251367256
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	4f290cfe30709ec18a4de93b75fc23f26a3e5876c250becf8d90f3b1da93dbd873ee1be266e2f45ed4563ad97cddcc100d517efc1657c620f5cc94c7ca80a335
+X-DEVICE-ID	0811222122
+Authorization-Customer	Bearer BSo5pyCJe3Z4TI_rZffpm8VcSVFAcrVDwc-InsucP9wmZkVcWhVDqdO8m_f7RKfUw78uajSGR4X1MgsA15ssKic_JyVezIpWeMM91ppJ-R9xEuX40WB2tWx9SV9NHWopUs5kxQG2KxwvdmryZAhbxDIVK8ERFbHyaFSsMCCBfWXDZAVFG3DB5EoV8lbLkHivaz2Kb01lJh4IGHDdFxVmuvWFjv3KAnJ_oVFUqUsxmjkVKiZKxcvVYmsBa11b6EbD5kVpsQvRwWHC8QKHbqfeEQ==
+Authorization	Bearer ZTQWNDE5YTGTNZVMZC0ZOTVHLTLKODYTNDGZM2ZHMJHINDRJ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114372001178",
+	"additionalInfo": {
+		"accountId": "111409905210"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 401 Unauthorized
+Server: nginx
+Date: Thu, 18 Jun 2026 07:55:05 GMT
+Content-Type: application/json
+Content-Length: 75
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4010000","responseMessage":"Unauthorized [Invalid Path]"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:36:42+07:00
+X-EXTERNAL-ID	202282018197
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	7300712a6bf3c519ea2cae8d75127a1c2d95c293937731384a716619622ee6e481bb7eb1e753c9c172bf866cea80ed15dee3184966ddcf880fa8b08743b85b4c
+X-DEVICE-ID	0811222122
+Authorization-Customer	Bearer BSo5pyCJe3Z4TI_rZffpm8VcSVFAcrVDwc-InsucP9wmZkVcWhVDqdO8m_f7RKfURgiK1N9d9HYmD5sN1uds4Y8ejxy2Ldgn6lpxodlR8GcRYi9fFVtji6l-ml9xQ7w3f5HCSMQplbT4rkQNHsRyUlR_s_Nfg6mXxtc09fs2wUm56vBpgCl_Ax0o7zHp50COq7hzjeJuGjhLGF53Ep9GXRRyjmcKiahWQP2e385pZK3o12NOCQ3VFfIZCFkNFCiqN_c6cXnRE_1yHEVIuwKfew==
+Authorization	Bearer ODEXMMRIMZMTZTZLOS0ZYZFJLTK4MJUTMMNLNWI0NGI3MDUW
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"117291860525",
+	"additionalInfo": {
+		"accountId": "111409905210"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 07:55:35 GMT
+Content-Type: application/json
+Content-Length: 244
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"550000.00"},"balanceType":"Cash"}],"name":"RETEST NO FEE","partnerReferenceNo":"117291860525","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:38:16+07:00
+X-EXTERNAL-ID	111140023570
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+CHANNEL-ID	BOOSTID
+X-DEVICE-ID	0811222118
+X-IP-ADDRESS	192.168.2.52
+X-SIGNATURE	968303a343bc9c6ab7c1cc305b8e3e497a40a759c56d8f29262ab777b4ceaaa81065156c73369bfad260e2e4778d128a51819115fca33a591c0c6b8b86df3782
+Content-Type	application/json
+Authorization	Bearer MZUXNJNHZJMTMJK1YY0ZODDMLWE4ZJCTMTRLMDG5YMQ3NJZH
+
+REQUEST BODY: 
+
+{
+    "partnerReferenceNo":"990602716853",
+    "accountNo": "81100213566",
+    "additionalInfo": {
+        "description": ""
+    }
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Thu, 18 Jun 2026 07:57:09 GMT
+Content-Type: application/json
+Content-Length: 63
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4041111","responseMessage":"Invalid Account"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:41:32+07:00
+X-EXTERNAL-ID	111182551117
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+CHANNEL-ID	BOOSTID
+X-DEVICE-ID	0811222118
+X-IP-ADDRESS	192.168.2.52
+X-SIGNATURE	2c9bdbd6b66f15d8bbabe377c5fcd907c225a5bedde15ddbfff5c2341ff02d0e5973c690f5d7b866ba87becd7cf09633d7d6b076b37654128a7eec01208402b0
+Content-Type	application/json
+Authorization	Bearer OWU0ZMFMOGETOTRHMI0ZOGJKLTLMZJKTOTIZN2E3YTK2MME5
+
+REQUEST BODY: 
+
+{
+    "partnerReferenceNo":"994211708669",
+    "accountNo": "81100230410",
+    "additionalInfo": {
+        "description": ""
+    }
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 404 Not Found
+Server: nginx
+Date: Thu, 18 Jun 2026 08:00:25 GMT
+Content-Type: application/json
+Content-Length: 63
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4041111","responseMessage":"Invalid Account"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:42:28+07:00
+X-EXTERNAL-ID	202276177133
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	bb5123066745355c7f20d178fd6087b6323fb0f4f042d2e032b1a96bee527bb71df3e5a4b02f6e254b6e8fbebd4e5c68f6408875196710bb62a893535858301f
+X-DEVICE-ID	0811222121
+Authorization-Customer	Bearer aB3T1GeAnS9pacgphJ93L3LscEQXAxCz1MHWzp3VAZQvXyaMLIKCYlHWhxCNPQukmXLy1aO5mFdnNExnI_bHJcc-JOCcfvgJyABRdCoOkogfR6qayAiQG5KLIedC5qcTBnC7wF8JGz_ZDXuEB-x4dfpbglPKsdqn9fSvV9oK8ChgmGoz7BJMuVIjufiM-9hv15zdZE_e2ytyuw8TTdwSymu8ViopUgV7vGYviItwDP4VOcwJqvJDPnnvgQFDWHiRR6x8wK8aaxpc9NPZRrekBQ==
+Authorization	Bearer OWJLZTAWMTCTNWFKMS0ZOWEYLWI2YJCTOTFIM2FLODNMZJCX
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114722256281",
+	"additionalInfo": {
+		"accountId": "111208745961"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 08:01:21 GMT
+Content-Type: application/json
+Content-Length: 242
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"1260000.00"},"balanceType":"Cash"}],"name":"RETEST FEE","partnerReferenceNo":"114722256281","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:42:36+07:00
+X-EXTERNAL-ID	202228471135
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	2321b1b300ee8ad51a1cb606511390f558bc7ea6fb5e26ffb7bee2530f38f1d5dbd9f74438553b90fdcbfe0f55216c67696bdfc7d417d12ef02981bb33391033
+X-DEVICE-ID	0811222120
+Authorization-Customer	Bearer DGfpB9mR2BRnRlvQTX8KkLpKB_ySovRmaA1bP6zPQTSyNiKrWMgN5v_DtiUkX_EkIwzbZpDikC6mxaszyjGOJkFdZW7A8fDdSm7RZJ443dlxxeZ9SJ-x3CJi5A6PazobLtqw9gHc8aMo98GGjAPK2IOIvQjgrOYcpOV9Ka-5d7RYF2O_GyfkDdCawbUx7k0NNV7rzaQVJ669veS0YBKyupdA0_fSc-246e4P6niakrx59g54j_nzZQ_laaImRWR_1ddfgHURt5NJzxCUL_8Jow==
+Authorization	Bearer YZQZYTQXMWMTMWRLYY0ZNZDILWE2ZTCTZMY2MDY2MMMWMTQZ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"117319613584",
+	"additionalInfo": {
+		"accountId": "111669205772"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 08:01:29 GMT
+Content-Type: application/json
+Content-Length: 242
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"505000.00"},"balanceType":"Cash"}],"name":"RETEST DEMO","partnerReferenceNo":"117319613584","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:42:45+07:00
+X-EXTERNAL-ID	202278135382
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	f8a703d89ab1fcb2792031eca371d96a3cfd604fcb15d38a917e88c1f31425fdef4471f3a79f55c56b36e71bf49997be0e27b6483de0e70eba0ec35ab8756e72
+X-DEVICE-ID	0811222118
+Authorization-Customer	Bearer 1px0NTnXP9CEZ5hzwwnNkWOpoNIIMaDJ-8mQLMioG1HS_zZzIx1xj6-tGzWKwUW7lFtws_Sf14exQlc0Emn8dEshUIkSdjkvsNs2Expw5IDD8ORviH1KqFduEPuOVzJT92kPjKpG7UqFlE75jeKPXw1X86y9Th6_3dMSQrVgw7yrWayPw4GnqlYHmBtHHBLqvp35iyZ7eqDIrtHYTWQ-cH6-xA-mgQDxlBjJs6Z305_8S4x4K-BZWA3_HPe0UFNJ6JhHat_Fa4STrl0K59KbkQ==
+Authorization	Bearer NGE1ODZJYTCTNWJLNC0ZYZBMLWE3YWETZTA4OTY3M2Q4MTLM
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"117287428054",
+	"additionalInfo": {
+		"accountId": "111204969133"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 08:01:38 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"670623.00"},"balanceType":"Cash"}],"name":"DEMO UAT","partnerReferenceNo":"117287428054","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:42:50+07:00
+X-EXTERNAL-ID	202240222846
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	d996d7bb662b12fa4b492e06f3fd6c3ba3eb2271f6035055e8cd48bb54d03d92ce2d4c361b459dd7ce50899dd2885cdcf1eb5936e71160018c6fdb66359c2768
+X-DEVICE-ID	0811222118
+Authorization-Customer	Bearer 1px0NTnXP9CEZ5hzwwnNkWOpoNIIMaDJ-8mQLMioG1HS_zZzIx1xj6-tGzWKwUW76b8LP4DYoGBKNLsui2_BuuBgQ9Szq_Lkijiio0DCcp2LfCBZEo9cfR7bojFRd3yWgJqUSr-1F7SOhEMzvoszCb6RlWBNYBs24tr9uNPbhbzz-Xnqz0mOL9aU8_p_043nHbfqoU8y2JnhcJswnnAI05LL85nzTCY2UoK6ft1HkMdq38jX1TehkjTS77VuAx4IH1vUOB22alE4FPTbnOSrYg==
+Authorization	Bearer Y2E1ZDMZODGTNMQ2MI0ZNJUYLTK0ZDKTZJY4MJDKNTLKMZK4
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114213925253",
+	"additionalInfo": {
+		"accountId": "111204969133"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 08:01:43 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"670623.00"},"balanceType":"Cash"}],"name":"DEMO UAT","partnerReferenceNo":"114213925253","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T14:42:54+07:00
+X-EXTERNAL-ID	202255958056
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	4d6d97741c792c6a6126d6ff7af07446207ce25958f017de2fd517aa6a8ed6568d14bdb641586c04d1f778e568c1b25526a1cf84ba49aa4f19a4a20ced74a5ab
+X-DEVICE-ID	0811222119
+Authorization-Customer	Bearer rixXSojV0W6cSKq-863CyM_GiVRK-UNUADepwrdA9t972qh2_gIKzS557if_8ai00M7jOssQhl3r5swggfDJclviGVUVQ-Uzc0AMsF07jW3tv8dTGHUKi6mTS_gu4gu-jcY45ngyQqfePyfwd4Qn6NMeNL0xsRI8fTnMdvEtapKFvKNKvmiVDHEAWJSUEjPdZlsVfpYserp-P9q-orTA28xnqk3oZrKUp_CM-IqAVIcKrcenXK776mV1Kc0gCB4-pKAD493hLrbjTgikSmeNxQ==
+Authorization	Bearer MJC1NZA5YTITZDE3ZI0ZYWI3LTKXMTATNWRJMTJMN2VKM2JJ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114181965965",
+	"additionalInfo": {
+		"accountId": "111212001352"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 08:01:48 GMT
+Content-Type: application/json
+Content-Length: 238
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"0.00"},"balanceType":"Cash"}],"name":"DEMO UAT DUA","partnerReferenceNo":"114181965965","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.1/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T15:42:33+07:00
+X-EXTERNAL-ID	202299484451
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	b46621d21b0e619a3441c6340709dce9e524e1502bebecf7c06f795d9cd5db0dfd7530274c1bce632b86ec2873a9f5717bc42b9988570dbd1485ee9bdd3ec502
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2GZSICb_dJOfVtXMkzPlzbDPikIsfz3jUDHLzUEcbMWZDtgTBABAmftQlwXvf4xcvEaanf-OeYtDN3CdzT0_pdYvw1_r1Qnoaark-GVPQ8LXmxhg_tIyFEThfymOLOvN4bxYKx_0RzyBcZwIJbwaRHjATR7p_mdpf-ayqd3Pi_ePcutrN-EMxoQmxnxVHTMq0_0jKGY6-03oHuEvg1I47U_g==
+Authorization	Bearer ZGY2MJY2YWQTOTG2YI0ZYJJJLWI5MMQTY2I5ZMFIMME4NJJI
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"116706508695",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 401 Unauthorized
+Server: nginx
+Date: Thu, 18 Jun 2026 09:01:27 GMT
+Content-Type: application/json
+Content-Length: 75
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4010000","responseMessage":"Unauthorized [Invalid Path]"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T15:43:33+07:00
+X-EXTERNAL-ID	202247894155
+X-PARTNER-ID	0021
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	APIMGM
+Content-Type	application/json
+X-SIGNATURE	abcb1f6aa4f4ed03ddc977627261b451c232b223609a6a9d0887efd2b9e683b69adbb6978332b0b3b0e5063c3b95867d62a74f7621fce4fc64c4d68b74fc8669
+X-DEVICE-ID	device-xiaomi
+Authorization-Customer	Bearer 1ZruXBhql4MhhYEUiXtwnIfW8EDllDA_QLoilSOwr73JvhL5JuzxsMVsbirpDC2Gh24tfTGoS2hhpIaMYkmx8-rMfGWjv5zsuKXJ3nvAuHZw2gJO5aOAvzZ17-X5PfHQ8M9zZEjEyLi-CuxcK0v2XMLABnDfRloo20CNUPZVqjQimUaLfI_bJPwRszRJV80RCRzl_1H0YQQYd7p-9by9Tii1a-yvChcaV8e38V1VU6fN-bgU01_Fz8T7dDoz41-G2bIVO03B17eHLJzFNmcxkg==
+Authorization	Bearer NDHHZDNIN2ETNMI0YI0ZOTEZLWIWMTETOTG5ODLHYWJHYTM4
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"115537381211",
+	"additionalInfo": {
+		"accountId": "111819305170"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 09:02:26 GMT
+Content-Type: application/json
+Content-Length: 249
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"63206982.00"},"balanceType":"Cash"}],"name":"UAT CARD SERVICE","partnerReferenceNo":"115537381211","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T15:44:37+07:00
+X-EXTERNAL-ID	202267497779
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	dce538da36323bd2fc81c9e489d0527a3b38b601b5e49f02d2269f2e11cba34f37647f3d8b57a3ccf0884de921dc78fc89aaa95409b013d4a12ce3ddcd1cf0f9
+X-DEVICE-ID	089688100207
+Authorization-Customer	Bearer BUn3X14lghFhoEGD86T7RU5Z6tYr6yahQhVegp6wc6e_Z3assxCx4WjqYboybHWI0YwJck3QmH415HzSWJMc95XxeNZCRAItLIsJJvdjKdBoZc_fIqsBlJui2gmuDrtle6MJjZsjLU8guqPk9M5t6-ayW6TmXy_5TNAJe0a-nDkcQbGY24xXIUKMxXCX2ZPN2xhFuruC71pUH6aPFxG75td1tat_SA2VlsVoXAPhwW0EF5WeAO1NUIX-zevdHJIWpaMU58O10adMJnhviiTP8A==
+Authorization	Bearer NGUZZDCZZTCTYZYWYI0ZMDI0LTK2NJITNTI2YJZKZJI5MDYX
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110064679439",
+	"additionalInfo": {
+		"accountId": "111993599878"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 09:03:30 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"51020000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"110064679439","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T15:44:43+07:00
+X-EXTERNAL-ID	202230586007
+X-PARTNER-ID	86fdc92f55044068922c1763d06a2ddc
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	TESTCFXQA
+Content-Type	application/json
+X-SIGNATURE	42bcee4390a25cc3bf9e1060346ccedef13228a2cc80c7d826b64f58c1cf329115aeb3544b5f952a06705609462be2d5692d747c0fa829c3d84e68dfcd9a6c4a
+X-DEVICE-ID	0811222001
+Authorization-Customer	Bearer xIv_CuEzXiM9ezoxmOetF5qHNuXL9ly0EOCG1hVps0D-mKvbl-7DZQexRD4-kj8Co3MMYxUtqA01gVHJNzms6JFgn5c67GIqOWH5VPc68Xwj7a0k5BM7IWf4FESiG3rfa45s-oWuQwaryzgW-Ynyoz1P8y0qqsmAwSvfqdl_WZk_UrMLe7G8DEIfIQAYeHbnm7VXm8Cb7_SvgSrVAP9gvisNbMPpwPdjIUtgkrnb1KGzEnoxo7XVHrlgVhOyo1kb1v7ucXkidkXbWPC5L-_Zag==
+Authorization	Bearer ZDM3MZDLMJETNGYWMI0ZMMJKLTKZNDITYTJMYJZKMMFHNZY0
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"117683647486",
+	"additionalInfo": {
+		"accountId": "111574743288"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 09:03:37 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"15000000.00"},"balanceType":"Cash"}],"name":"ATREUS","partnerReferenceNo":"117683647486","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T15:44:56+07:00
+X-EXTERNAL-ID	202222082688
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	2ad0c786abb70b7658f735c2abd6b27f9dc7cd940d737695a30f95485f9b96e360090d5c918965665a2f87829188dc449c69ddc0c69d544cc011470253b16847
+X-DEVICE-ID	089987990023
+Authorization-Customer	Bearer xIv_CuEzXiM9ezoxmOetF5qHNuXL9ly0EOCG1hVps0D-mKvbl-7DZQexRD4-kj8Co3MMYxUtqA01gVHJNzms6JFgn5c67GIqOWH5VPc68Xwj7a0k5BM7IWf4FESiG3rfa45s-oWuQwaryzgW-Ynyoz1P8y0qqsmAwSvfqdl_WZk_UrMLe7G8DEIfIQAYeHbnm7VXm8Cb7_SvgSrVAP9gvisNbMPpwPdjIUtgkrnb1KGzEnoxo7XVHrlgVhOyo1kb1v7ucXkidkXbWPC5L-_Zag==
+Authorization	Bearer MZG5ZTVIZGYTNGYYOC0ZOTVKLTHJNDGTYTGYZDNKZTQ2NJIX
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110879902164",
+	"additionalInfo": {
+		"accountId": "111688716802"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 401 Unauthorized
+Server: nginx
+Date: Thu, 18 Jun 2026 09:03:50 GMT
+Content-Type: application/json
+Content-Length: 85
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4011102","responseMessage":"Unauthorized - Invalid Customer Token"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-18T15:45:14+07:00
+X-EXTERNAL-ID	202287708900
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	1c331e959b1c0ae335cc0ee473b58ee2bba42c62f747cbe383ca02c55978536c8f4e68bd49bd6c6ff6c95931600d651c405117973d106abe9f1932d49f16d7bb
+X-DEVICE-ID	0819788727639
+Authorization-Customer	Bearer PuqzLnH7OR8yodWQq6qx7gdSnZBXbYc4RZuXHO_VGFcPaa5GjC99tUYyjkk0RfvWM_yN-bLCocaW_Yk7MuCow0R2-vlMxRklRkBc1Q_62-MOUicw-yIygTIm9FHgupO7zybi-7t6sHExcfvlFAY-1c0euqRA-6MYQRYzlyCsMZHIC2YhHfJECgDB3WGl9B9_jgS_OdC1C-_FJqKY5zp52ze_0wINjOBJHLVvN7sx26r1WkqODCbL3IEPO-mbpFkXjKm1q5wtD1hnd0ORHSHtFA==
+Authorization	Bearer ZGRJM2MWYTITZTY4NI0ZYJU1LTGZZDKTYMMWODFJZDY5MWEZ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"118022236392",
+	"additionalInfo": {
+		"accountId": "111116264463"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Jun 2026 09:04:07 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"7025000.00"},"balanceType":"Cash"}],"name":"RAYANDA","partnerReferenceNo":"118022236392","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-19T14:43:02+07:00
+X-EXTERNAL-ID	202239262878
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	b109bd3c085aa4179c1d2d841271e5aaa7d017bb891754a695d67f5205b76ad43be4edf55d51739a6066691961c0987ceae4112e73a9d009917e909c6e06deed
+X-DEVICE-ID	0819788727639
+Authorization-Customer	Bearer PuqzLnH7OR8yodWQq6qx7gdSnZBXbYc4RZuXHO_VGFcPaa5GjC99tUYyjkk0RfvWONR237QEb_PyD-JoB0X8nWrkWZyuNgrStWDMvsebMtCqPTQLTa5ekvdfZu5wK4yKQNEpLYWjkQ9opEE-klNXxRJSr_ekendi3a_0Knu5jQlFY4ejXtRoffhjev1RWMmi8wQHERL14oofs87VqMVcPND7ZwdGeU4zw09B0LX3VvcZKuBP5BDMNg9ZT5XKbpRcU8oUTm7N-qqmdkkLnyxR2A==
+Authorization	Bearer MWEWMZIYM2YTYWRLZS0ZMJKWLTGXYZQTNDG2NJMYOWU3ZGFI
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"118937735608",
+	"additionalInfo": {
+		"accountId": "111116264463"
+	}
+}
+
+RESPONSE HEADER: 
+
+
+
+RESPONSE BODY: 
+
+java.net.UnknownHostException: sandbox-api.nobubank.com
+	at java.net.InetAddress$CachedAddresses.get(InetAddress.java:764)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1291)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1144)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1065)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-19T14:43:16+07:00
+X-EXTERNAL-ID	202263442487
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	c246b91664253e8cec77c3ae6310695fac9bb04469f1a54acc413c9ed6ac2aab830050045b2504e08f007e8afd534ac245b451f4e926709058926f04e40bb14c
+X-DEVICE-ID	0819788727639
+Authorization-Customer	Bearer PuqzLnH7OR8yodWQq6qx7gdSnZBXbYc4RZuXHO_VGFcPaa5GjC99tUYyjkk0RfvW8m6Qw_JXUANZd-MOurdy_JTfd40Sez8wqY0Fj2gAt3hWlq_weaqP33etKSv4Wv6hPFz8oGixz1v6vgv1HK8u6A2Onq8orPFhNInbv8Alju3itJa3wC7pBXteMfgzZZV-yVWZ1KBu5uek6nXSRwtcO1RX4AmMrMb46W82bGzNqCDRmQNif3VWA18iLV8v51gDJUmvmMZr7gHoojsc1QCVKQ==
+Authorization	Bearer Y2MZYTHINTUTNWRLZC0ZYZLKLTKZYJMTMGU4MDIXYMU2YTFJ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114645820131",
+	"additionalInfo": {
+		"accountId": "111116264463"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 19 Jun 2026 08:02:11 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"7025000.00"},"balanceType":"Cash"}],"name":"RAYANDA","partnerReferenceNo":"114645820131","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:04:09+07:00
+X-EXTERNAL-ID	202263796749
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	2c35f73522f2a793ed606aebe7ef0bd8878cb7d8cb056724bd93c3463de181f52e206dec177a6fddaaeffd63e24e9df50aa7a1b54b6d567cbce3bdb302817f89
+X-DEVICE-ID	0811222122
+Authorization-Customer	Bearer BSo5pyCJe3Z4TI_rZffpm8VcSVFAcrVDwc-InsucP9wmZkVcWhVDqdO8m_f7RKfUdGLqSCs0SmwuLE9men7y_faAJgFz4j__A-TEBr7ll6Az43qpMPHRKi3RswUYUbi3l_CXvzHsj22j21uz2zODYwWYrTs_4sM2iaV5CEiBwoN7cxLJoaR6XAYELPZRzRY6DQwW4lAsc9qyVgDrpzhJVQ5Zphlg0XUoo6ghTcJpjCrTk08Yx7pbIxT_QREWaM5697wAOHFGXGrZZ5BbQSz6Qw==
+Authorization	Bearer NMQ1MWZIOTCTZTDLMI0ZMGNKLWE5ZGETODC2YMQ5MDU2Y2ZK
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"111280033231",
+	"additionalInfo": {
+		"accountId": "111409905210"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:23:13 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"0.00"},"balanceType":"Cash"}],"name":"RETEST NO FEE","partnerReferenceNo":"111280033231","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:04:23+07:00
+X-EXTERNAL-ID	202241508339
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	faf59d3455c96262e3e648e19f41e566b78f2b15f6308ebdb876e52185a371edbcfb15c861692f4efa1b902aa7c29560540d6b80abee95508a324bac7520efcc
+X-DEVICE-ID	0811222117
+Authorization-Customer	Bearer f-Rxj5sO7ASUvE2UvAmDU3Vgt0skJ0xcfB7K7_g6njjCHMWa4oRCedDPvcOnqWKmrs_Qu-qB2UH5tlP195nNg0yv888N1Z5gAP8FCLxSv4Y3-m4Kj5zjvfyIoJl6mSAimjn2DRW6yoDgY9R98J4J7_dOO8NIyduDzD-lRxzssv1UG-y7qbF3wzKkxUbrRm9lzRzsu1MaaXsbSU6Er1bUMrXITgauCSuW5hOULn9iNMOhmznuK0XGBh34Y7VdkUX28gbcYtlgnjzOXwzdrZ_TKA==
+Authorization	Bearer MWU4ZTCWZWITZDRMMC0ZZTMZLTHLYMUTYZA3YJFIZDM0NTDM
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"114042443140",
+	"additionalInfo": {
+		"accountId": "111720958937"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:23:27 GMT
+Content-Type: application/json
+Content-Length: 233
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"0.00"},"balanceType":"Cash"}],"name":"RX KING","partnerReferenceNo":"114042443140","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:04:26+07:00
+X-EXTERNAL-ID	202231299740
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	dc05fde725cc64e68e020dadf911035e415336a0ef13322f385978bc2d9d89cb88a17761c2005dd1fa0386f7773a347eef40ff47d2967c50a4ddbde451e2efe2
+X-DEVICE-ID	0811222117
+Authorization-Customer	Bearer f-Rxj5sO7ASUvE2UvAmDU3Vgt0skJ0xcfB7K7_g6njjCHMWa4oRCedDPvcOnqWKmgcBRFWPeno_eC1JDkrO8bW38uYqdOs2OAjMQdkMzbDJ38kBc1RW7wJ5TEOWb4bAdjVzz6kS03udoTTKv86wIx_vwmxIfCaUApArMvApRBpLgIucZGQjODLO_fwE8L_RTq0Rwy4fwOlcaSVCO1XksT7VHGNR-FBTW0mr_0SJP7XIU7j0cJ6eAaXANuVj4XOPSiy3Xf4dHQyBYD_Syr42N-Q==
+Authorization	Bearer ODI2Y2M1ZDQTNMU0NC0ZZDC0LTK5MTUTN2MXM2JIMTJJMGI1
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110203341626",
+	"additionalInfo": {
+		"accountId": "111720958937"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:23:30 GMT
+Content-Type: application/json
+Content-Length: 233
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"0.00"},"balanceType":"Cash"}],"name":"RX KING","partnerReferenceNo":"110203341626","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:06:18+07:00
+X-EXTERNAL-ID	202201727799
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	7b85f0a8a170e89f16b9e415cdd2b208b04a7ad73dfd939cb02382582d4aae6ce773230069c8d53e9aec38dabc9be7dfed34729434cfc9478ca573595995032f
+X-DEVICE-ID	0811222117
+Authorization-Customer	Bearer f-Rxj5sO7ASUvE2UvAmDU3Vgt0skJ0xcfB7K7_g6njjCHMWa4oRCedDPvcOnqWKmB7d0i-VtryehMikdkEgK0ds_TmvsUPlTcHoyihkc4A2OdltsAJLkaQUrFXUSNeNseFPcAHW6DYO-ygbH7wTspbRnF1Kw3SPNOfYBOE8j16J7G0jUoLfbic94SZfMj3kMTivqtVnJfYicWr9WhL7rtXAfMoOqsTcSgu9Jgqan68QyXUFZ8nyHtRUbP2ET5CV2sQGvhJRSnsz7pSffansGRA==
+Authorization	Bearer MGE3NMZKMZUTNDG0ZC0ZOTLILWE4ZJCTZJQXMTM3YTE5YJJM
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110632864090",
+	"additionalInfo": {
+		"accountId": "111720958937"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:25:22 GMT
+Content-Type: application/json
+Content-Length: 240
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"40000000.00"},"balanceType":"Cash"}],"name":"RX KING","partnerReferenceNo":"110632864090","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:06:26+07:00
+X-EXTERNAL-ID	202261755397
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	1569d0aabf1b17a31dad6dcf808c40d75aaaabba1459f2a4a9f7d9d4f485bf7400587f0e002423d789a517951e6201c153ff6cc3bbd200542477258aabf2799b
+X-DEVICE-ID	0811222116
+Authorization-Customer	Bearer PECtUqmQ_2R90sT0uWKdDGTHk_9iIA-DgWsZiID_BmHkycI6Ex_wyAYUgqZuoPX00TfutJIYiPgbHEXdzRaby9oK1fddjt5BCKXzNwmpA1rSthcvqNBB9EQjLILcHfT1n-mTnBo-KYf6sVpj5o_3pKV1Sjknck0Kja19BryJPanGfh91gvz6JFOKnbzOdxQgI0wDK_lzdi1Yq3Ozjt6Mvnoj2JLHD1-Es0aEJIqU5-Bp3xZ8WOZ6fc6bSv-KHAgaQb9q2Y9gaiZQH9476LZHfA==
+Authorization	Bearer NGEYNZLHNWMTZJKXMI0ZOGJMLTK3NMYTYTUWYTI4MTI2OTEZ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"119635107739",
+	"additionalInfo": {
+		"accountId": "111524061591"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:25:30 GMT
+Content-Type: application/json
+Content-Length: 238
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"10200000.00"},"balanceType":"Cash"}],"name":"REXUS","partnerReferenceNo":"119635107739","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:06:35+07:00
+X-EXTERNAL-ID	202263038434
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	1c8de68ff039883ebae5a7d488ffec962e3917b5f0488781f5dc8610edaf65e088150425571f3cf1353e8d84de07219fbd88d137265347869bf0c11e7e0b883c
+X-DEVICE-ID	0811222109
+Authorization-Customer	Bearer _lWjgJoEjpbrc7nyETzPdkJ20kiwyqP-DVPwdSU-R8uhGPK_0FLJAQ6hFYM3UtPi_yZLTtcWcYF6izH6LdVDiHK0-J-uGXgP-8R1bBxi9TtchWHnXAJQs5Z9XtzpMc0OLAxs8yqxATf6rA_PWMHWxa-vAR4LogrKR3ukx6jKheZmkHIJOsiOAPOBiu0To2SU-RwDl22W7U3vXmpSbBBjMbhRfN7MctLl2KnYN2V3-thAYe7Hia0p3xk5VtnC56HRBpyu-ZSt_Xr-ltNbGVObhg==
+Authorization	Bearer NTNLYMFINDCTNDLKOC0ZOTMYLTG4NWYTMGM4YZQ1ZDHJZDJL
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"116119973331",
+	"additionalInfo": {
+		"accountId": "111687000719"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:25:39 GMT
+Content-Type: application/json
+Content-Length: 249
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"15000000.00"},"balanceType":"Cash"}],"name":"HUSKAR SIX SEVEN","partnerReferenceNo":"116119973331","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:06:42+07:00
+X-EXTERNAL-ID	202256369038
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	f54e6613f1f72bc984708f97046a3616fcebf5984250e6238b48470323933012f66838cb64f8276648fb88791879f26c7681026c5be305f4c9cecc29a0754396
+X-DEVICE-ID	0811222110
+Authorization-Customer	Bearer 9d8v4EKhTmBU0rWaeV9w7zE9FjMnPpUpOUS0dr7sy8GYx23QHEH7T6aAjBJujMvRG2peRj2UmgzmQBlXqDgwNFf0kYkuFB2yUIgwnJn-nztQ9rvxAn1YMP-O_hxPXue8x66tYE8LobeeslPfHEDyjLNxbwOKyB-dDcw1b_cu6Zt6_LCZTmtkXZ7-OsGsBLqkM0kvn1uMOvO_We3w9ty3jfidiP8KpGIiPoYq2K256-tl7r9kSaHPWuB9I48jtTBbaheC3XJxPQXO2khe7ncxsQ==
+Authorization	Bearer MDI1OTYZNGYTMGVLZC0ZZWU2LWI2MJGTNZUXOTKWZDM5ZWVI
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"111338082000",
+	"additionalInfo": {
+		"accountId": "111985585954"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:25:47 GMT
+Content-Type: application/json
+Content-Length: 247
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"10000000.00"},"balanceType":"Cash"}],"name":"YENI PUJIYANTI","partnerReferenceNo":"111338082000","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:07:00+07:00
+X-EXTERNAL-ID	202215501468
+X-PARTNER-ID	deacbaae8bcc4ce5a9c14822a0d42af6
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BOOSTID
+Content-Type	application/json
+X-SIGNATURE	76df84da008bb2e1eaf90faa21235fde0c0bead822d833a765dd13708a4c2417308f35a9d0efc59694ca97352f8dc7fc80153d83d121b20923498129532385a7
+X-DEVICE-ID	0811222117
+Authorization-Customer	Bearer f-Rxj5sO7ASUvE2UvAmDU3Vgt0skJ0xcfB7K7_g6njjCHMWa4oRCedDPvcOnqWKmo11uiPd6DE6Czgl3YY74_IO9u__2zBoVFEmX31zUPYoNH3fWLGTV4VcyO4j5yL1A5XbR55lxVEzcQdywo-qW766RvPYfOydDUUwqA3Yv-OyPcapawP3ZDNxK3GkrT37REJk8MrOO5r1oJNof-PmeI3Bwp9cWa8R3-fOMVOmarhteoFTLnUYoJuEJ7YaOgfi2yLzXLRp9EyhWh8mdUDhDWw==
+Authorization	Bearer OGFKYJHIYZGTOWVMYS0ZNZK2LWJIOWMTYJZIZTI4ZJU0MMIZ
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"110199074538",
+	"additionalInfo": {
+		"accountId": "111720958937"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:26:04 GMT
+Content-Type: application/json
+Content-Length: 240
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"40000000.00"},"balanceType":"Cash"}],"name":"RX KING","partnerReferenceNo":"110199074538","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/v1.0/account-inquiry-internal/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:19:36+07:00
+X-EXTERNAL-ID	111103520524
+X-PARTNER-ID	0021
+CHANNEL-ID	APIMGM
+X-DEVICE-ID	audi-device-666
+X-IP-ADDRESS	192.168.2.52
+X-SIGNATURE	a12eef5f731e3539e882d5446093a8c02cbd9dc889549b470f21a362133b0c826d897463d7b54af7c8457b8078079f9c21509b1b6bcf9bbf1becd6288084dad7
+Content-Type	application/json
+Authorization	Bearer MZC0OTI0YMMTYME3OS0ZNTG3LWIXMZGTMTMXMJLJOTLMN2FL
+
+REQUEST BODY: 
+
+{
+    "partnerReferenceNo":"996127579261",
+    "accountNo": "81100213566",
+    "additionalInfo": {
+        "description": ""
+    }
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Thu, 25 Jun 2026 02:38:39 GMT
+Content-Type: application/json
+Content-Length: 97
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"responseCode":"4001502","responseMessage":"Missing Mandatory Field { beneficiaryAccountNo .}"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-06-25T09:20:24+07:00
+X-EXTERNAL-ID	111115381317
+X-PARTNER-ID	0021
+CHANNEL-ID	APIMGM
+X-DEVICE-ID	audi-device-666
+X-IP-ADDRESS	192.168.2.52
+X-SIGNATURE	fbad9e30e65aea8dda4f5e2ef5aa81e872776d6d38d49b2c78e703f97e4e00c36d53fc5e2280e2a4248b546b7eb97aed6e6f3c49cbee1e8e586c0166ef31b5e4
+Content-Type	application/json
+Authorization	Bearer MDU5ZDIWODETMDE3ZS0ZYMRLLWFHMDUTZDMWNTAZZMVMMJK2
+
+REQUEST BODY: 
+
+{
+    "partnerReferenceNo":"996668692385",
+    "accountNo": "81100213566",
+    "additionalInfo": {
+        "description": ""
+    }
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 25 Jun 2026 02:39:27 GMT
+Content-Type: application/json
+Content-Length: 303
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"7756524503.00"},"balanceTypes":"Cash"}],"accountNo":"81100213566","name":"SETOR TUNAI6","partnerReferenceNo":"996668692385","referenceNo":"697578796047","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-07-03T10:33:45+07:00
+X-EXTERNAL-ID	202210208769
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	42a92f2561b4b3fda290e13fd37d8cda81afee43745504e33440a89836228df94dea241c811e3594dba49e7b96b71cfaa4abbe2875bb6fbf89890decd37f2106
+X-DEVICE-ID	0819788727639
+Authorization-Customer	Bearer PuqzLnH7OR8yodWQq6qx7gdSnZBXbYc4RZuXHO_VGFcPaa5GjC99tUYyjkk0RfvWXyv8n3AU9tclWeYfGKkRJUXN19YUXG5vLjtDyX7mUuES47oUw3z8lG-6qgiZ429iaAaqlC6M6LSg2uoNrEj88F0JRZ-FiH2sCBZscmLcYsz-ApIgR8ciwsYkj_9k1R99haOv0Xr1eo8uyOjag1twCN-27fJXk5ora0eoenEORqtZCPijB4HQieEukV9ukXnMW09M7r-1OGEnMgdZGDP2Tg==
+Authorization	Bearer YTHHNDZLMZUTYZJLNY0ZNTI5LTK5MJQTMMM3MTI5OWE4ZTC0
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"113138453598",
+	"additionalInfo": {
+		"accountId": "111116264463"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 05 Jul 2026 16:23:31 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"6919499.67"},"balanceType":"Cash"}],"name":"RAYANDA","partnerReferenceNo":"113138453598","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
+
+URL: https://sandbox-api.nobubank.com/cobrand-saving/v1.0/balance-inquiry/
+
+REQUEST HEADER: 
+
+X-TIMESTAMP	2026-07-03T10:33:45+07:00
+X-EXTERNAL-ID	202234953342
+X-PARTNER-ID	b37c430852f74ca5b4d12ced406f1938
+X-IP-ADDRESS	192.168.1.44
+CHANNEL-ID	BUKUWARUNG
+Content-Type	application/json
+X-SIGNATURE	9d221a7238a2c92f29d83ef3b9715d94fba0c9a77f0ca1098f06f8085597525f850d3ad7a65f5005ad17808cd40d9af1b2d7caa8d271c93431e50baa8c2af7bc
+X-DEVICE-ID	0819788727639
+Authorization-Customer	Bearer PuqzLnH7OR8yodWQq6qx7gdSnZBXbYc4RZuXHO_VGFcPaa5GjC99tUYyjkk0RfvWl3VgUksWhnFuGNl1-DXKlPQyo-F5sqzdz2aA53MXGvY9mgU3o11GEbLXpRyE5nHTelHjrzJSV-x8TgKvGZAKsZ6tSrwNHipBAztFzy-8-bQBZWJt6N--YB4cPP-WbRkL1A02X750S2f8nuxQLl6K7A2tcyyO9_yqxPuwfpz6APYjWFq60A_XJ6u5iuuTtSTQMM6yPpb27zh2WFbtxflLrw==
+Authorization	Bearer N2ZINTIZODGTNDDMNS0ZZMNJLWEYNZUTOTKWY2VMNTDLMDVK
+
+REQUEST BODY: 
+
+{
+   	"partnerReferenceNo":"118911317985",
+	"additionalInfo": {
+		"accountId": "111116264463"
+	}
+}
+
+RESPONSE HEADER: 
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Sun, 05 Jul 2026 16:34:35 GMT
+Content-Type: application/json
+Content-Length: 239
+Connection: keep-alive
+Content-Security-Policy: default-src 'self'
+Permissions-Policy: vibrate 'none'; geolocation 'none'
+Referrer-Policy: no-referrer
+Strict-Transport-Security: max-age=3600; includeSubdomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 0
+
+
+RESPONSE BODY: 
+
+{"accountInfos":[{"availableBalance":{"currency":"IDR","value":"6919499.67"},"balanceType":"Cash"}],"name":"RAYANDA","partnerReferenceNo":"118911317985","responseCode":"2001100","responseMessage":"Request has been processed successfully"}
+
+
+
+---------------------------------------------------------------------------------------
+
