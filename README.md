@@ -31,8 +31,6 @@ The project test plans currently pushed to the main branch are structured inside
 
 Real-world execution logs, validation traces, and response payloads are captured in the [testing-result/](file:///Users/jordan/Desktop/JMX/apache-jmeter/testing-result) directory. These logs provide concrete proof of test runs across different environments:
 
-* **Balance Inquiry**: [testing-result/Balance Inquiry.txt](file:///Users/jordan/Desktop/JMX/apache-jmeter/testing-result/Balance%20Inquiry.txt) shows the detailed HTTP request headers, signatures, payloads, and corresponding success responses for API Token acquisition and Balance Inquiry calls.
-* **Intrabank Standalone Transfer**: [testing-result/Standalone - Intrabank.txt](file:///Users/jordan/Desktop/JMX/apache-jmeter/testing-result/Standalone%20-%20Intrabank.txt) captures execution proof and validation outputs for the standalone Intrabank transfer flows.
 
 ---
 
