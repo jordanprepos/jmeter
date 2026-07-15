@@ -20,22 +20,10 @@ The primary goal of this project is to leverage **Apache JMeter as a robust API 
 
 The project test plans currently pushed to the main branch are structured inside the `JMX/` folder:
 
-* **`JMX/CPM/`**: Consumer Presented Mode QR transactions:
-  * `QR CPM - AJ.jmx`
-  * `QR CPM - Batam QRIS Tap.jmx`
-  * `QR CPM - Cancel.jmx`
-  * `QR CPM - Generate.jmx`
-  * `QR CPM - Payment.jmx`
-  * `QR CPM - Query.jmx`
-  * `QR CPM - Refund.jmx`
-* **`JMX/Cobrand Savings/`**:
-  * `BATAM Cobrand Savings - All.jmx` (All-in-one Cobrand Savings test plan)
-* **`JMX/Firm Banking/`**: Firm Banking and Transfer operations:
-  * `Firm Banking - Balance Inquiry.jmx`
-  * `Firm Banking - Bank Statement.jmx`
-  * `Firm Banking -.jmx`
-  * `Standalone/Standalone Interbank - Transfer.jmx`
-  * `Standalone/Standalone Intrabank - Transfer.jmx`
+* **`JMX/CPM/`**: transactions example:
+  * `Test.jmx`
+  * `Test 2.jmx`
+ 
 
 ---
 
